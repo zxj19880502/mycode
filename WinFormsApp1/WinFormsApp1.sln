@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.vbproj", "{F8098B18-8329-42CE-BF3B-924AC652D1BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Debug|x86.ActiveCfg = Debug|x86
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Debug|x86.Build.0 = Debug|x86
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Release|x86.ActiveCfg = Release|x86
+		{F8098B18-8329-42CE-BF3B-924AC652D1BB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03588FA1-FE18-4DA9-8E4C-8C6FE0D8CE3A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sendmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="textBox4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="textBox5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="textBox6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="richTextBox1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="textBox7" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendmailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="shujuchaxun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="work_order" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endtiem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="shujuchaxunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="shujuchaxunResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ziduantiaojian">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ziduan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="biaoming" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tiaojian" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ziduantiaojianResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ziduantiaojianResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataSetBytes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vCmd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataSetBytesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataSetBytesResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vCmd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataSetSurrogateZipBytes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vCmd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataSetSurrogateZipBytesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataSetSurrogateZipBytesResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getValueSoapIn">
+    <wsdl:part name="parameters" element="tns:getValue" />
+  </wsdl:message>
+  <wsdl:message name="getValueSoapOut">
+    <wsdl:part name="parameters" element="tns:getValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendmailSoapIn">
+    <wsdl:part name="parameters" element="tns:Sendmail" />
+  </wsdl:message>
+  <wsdl:message name="SendmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="shujuchaxunSoapIn">
+    <wsdl:part name="parameters" element="tns:shujuchaxun" />
+  </wsdl:message>
+  <wsdl:message name="shujuchaxunSoapOut">
+    <wsdl:part name="parameters" element="tns:shujuchaxunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ziduantiaojianSoapIn">
+    <wsdl:part name="parameters" element="tns:ziduantiaojian" />
+  </wsdl:message>
+  <wsdl:message name="ziduantiaojianSoapOut">
+    <wsdl:part name="parameters" element="tns:ziduantiaojianResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSetBytesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataSetBytes" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSetBytesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataSetBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSetSurrogateZipBytesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataSetSurrogateZipBytes" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSetSurrogateZipBytesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataSetSurrogateZipBytesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="getValue">
+      <wsdl:input message="tns:getValueSoapIn" />
+      <wsdl:output message="tns:getValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendmail">
+      <wsdl:input message="tns:SendmailSoapIn" />
+      <wsdl:output message="tns:SendmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="shujuchaxun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">条件查询表G_SN_COUNT直接返回DataSet对象</wsdl:documentation>
+      <wsdl:input message="tns:shujuchaxunSoapIn" />
+      <wsdl:output message="tns:shujuchaxunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ziduantiaojian">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">字段，表，条件，查询直接返回DataSet对象</wsdl:documentation>
+      <wsdl:input message="tns:ziduantiaojianSoapIn" />
+      <wsdl:output message="tns:ziduantiaojianSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetBytes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回DataSet对象用Binary序列化后的字节数组</wsdl:documentation>
+      <wsdl:input message="tns:GetDataSetBytesSoapIn" />
+      <wsdl:output message="tns:GetDataSetBytesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SQL查询，直接返回DataSet对象</wsdl:documentation>
+      <wsdl:input message="tns:GetDataSoapIn" />
+      <wsdl:output message="tns:GetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetSurrogateZipBytes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回DataSetSurrogate对象用Binary序列化并ZIP压缩后的字节数组</wsdl:documentation>
+      <wsdl:input message="tns:GetDataSetSurrogateZipBytesSoapIn" />
+      <wsdl:output message="tns:GetDataSetSurrogateZipBytesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getValue">
+      <soap:operation soapAction="http://tempuri.org/getValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendmail">
+      <soap:operation soapAction="http://tempuri.org/Sendmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="shujuchaxun">
+      <soap:operation soapAction="http://tempuri.org/shujuchaxun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ziduantiaojian">
+      <soap:operation soapAction="http://tempuri.org/ziduantiaojian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetBytes">
+      <soap:operation soapAction="http://tempuri.org/GetDataSetBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetSurrogateZipBytes">
+      <soap:operation soapAction="http://tempuri.org/GetDataSetSurrogateZipBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getValue">
+      <soap12:operation soapAction="http://tempuri.org/getValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendmail">
+      <soap12:operation soapAction="http://tempuri.org/Sendmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="shujuchaxun">
+      <soap12:operation soapAction="http://tempuri.org/shujuchaxun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ziduantiaojian">
+      <soap12:operation soapAction="http://tempuri.org/ziduantiaojian" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetBytes">
+      <soap12:operation soapAction="http://tempuri.org/GetDataSetBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://tempuri.org/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetSurrogateZipBytes">
+      <soap12:operation soapAction="http://tempuri.org/GetDataSetSurrogateZipBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://172.25.58.28:8009/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://172.25.58.28:8009/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

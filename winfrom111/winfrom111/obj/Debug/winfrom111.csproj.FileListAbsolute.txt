@@ -1,0 +1,13 @@
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\bin\Debug\winfrom111.exe.config
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\bin\Debug\winfrom111.exe
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\bin\Debug\winfrom111.pdb
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.csproj.AssemblyReference.cache
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.Form1.resources
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.Properties.Resources.resources
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.csproj.GenerateResource.cache
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.csproj.CoreCompileInputs.cache
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.exe
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.pdb
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.csproj.ResolveComReference.cache
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\obj\Debug\winfrom111.Form2.resources
+C:\Users\xiaolong_zhu\source\repos\winfrom111\winfrom111\bin\Debug\DataSetSurrogate.dll

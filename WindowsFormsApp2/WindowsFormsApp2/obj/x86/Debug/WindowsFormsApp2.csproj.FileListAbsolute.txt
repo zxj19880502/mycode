@@ -1,0 +1,11 @@
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x86\Debug\WindowsFormsApp2.exe.config
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x86\Debug\WindowsFormsApp2.exe
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x86\Debug\WindowsFormsApp2.pdb
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.exe
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x86\Debug\WindowsFormsApp2.pdb
+C:\Users\xiaolong_zhu\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x86\Debug\Oracle.ManagedDataAccess.dll

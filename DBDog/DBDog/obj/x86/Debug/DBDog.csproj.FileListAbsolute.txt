@@ -1,0 +1,11 @@
+d:\workspace\DBDog\DBDog\DBDog\DBDog\bin\Debug\DBDog.exe.config
+d:\workspace\DBDog\DBDog\DBDog\DBDog\bin\Debug\DBDog.exe
+d:\workspace\DBDog\DBDog\DBDog\DBDog\bin\Debug\DBDog.pdb
+d:\workspace\DBDog\DBDog\DBDog\DBDog\obj\x86\Debug\DBDog.Properties.Resources.resources
+d:\workspace\DBDog\DBDog\DBDog\DBDog\obj\x86\Debug\DBDog.exe
+d:\workspace\DBDog\DBDog\DBDog\DBDog\obj\x86\Debug\DBDog.pdb
+d:\workspace\DBDog\DBDog\DBDog\DBDog\bin\Debug\DBDogCfg.xml
+d:\workspace\DBDog\DBDog\DBDog\DBDog\obj\x86\Debug\DBDog.Form1.resources
+D:\workspace\DBDog\DBDog\DBDog\DBDog\obj\x86\Debug\DBDog.csproj.GenerateResource.Cache
+D:\workspace\DBDog\DBDog\DBDog\DBDog\obj\x86\Debug\DBDog.csprojResolveAssemblyReference.cache
+D:\workspace\DBDog\DBDog\DBDog\DBDog\bin\Debug\Oracle.ManagedDataAccess.dll
