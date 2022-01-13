@@ -16,7 +16,7 @@ cursor = conn.cursor()
 cursor.execute(v_sql)
 
 #b=["REEL_ID","PART_NO","Vendor","M_LOT","DATE_CODE","UPDATE_TIME","option1","option2","option3","QTY"]
-with open(csv_file_name,'w',newline='',encoding = 'gb18030') as t:
+with open(csv_file_name,'w',newline='') as t:
     writer=csv.writer(t)
    # writer.writerow(b)
     writer.writerows(cursor)
