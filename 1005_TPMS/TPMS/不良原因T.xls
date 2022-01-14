@@ -1,0 +1,5543 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Styles>
+    <Style ss:ID="title">
+      <Alignment ss:Horizontal="Center" />
+    </Style>
+  </Styles>
+  <Worksheet ss:Name="Table1" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+    <Table>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">不良原因代码</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">不良原因描述</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">不良原因描述(2)</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺件(component loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺電阻(resistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺手插件電阻(H/I resistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺A/I件電阻(A/I resistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SMD電阻(SMD resistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺電容(capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺電解電容(Electrolytic  Capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺瓷片電容(ceramic type capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..23</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺積層電容(multilayer capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..231</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺積層電容(A/I件) (A/I multilayer capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..232</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺積層電容(手插件)(H/I multilayer capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..24</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺有機薄膜電容(plastic film capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..25</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SMD電容(SMD capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..26</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺其他類電容(other types capacitance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺二極體(diode loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..31</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺手插件二極體(H/I diode loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..32</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺A/I件二極體(A/I diode loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..33</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SMD二極體(SMD diode loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺三極體(transistor loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..41</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺雙極型三極體(transistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..42</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺MOS三極體(MOS-FET transistor loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..43</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SMD雙極型三極體(SMD transistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..44</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SMDMOS三極體(SMD MOS-FET tansistance loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺IC (IC loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..510</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺431(IC 431 loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..511</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SMD431(SMD IC 431 loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..52</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺光偶(photocoupler IC loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..60</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺跳線(jumper loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..70</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺SCR(SCR loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..80</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺電感(choke loss)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..91</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">A/I零件不良(A/I component is not good)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..92</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SMD零件不良(SMD component is not good)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..93</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">手插零件不良(H/I component is not good)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..94</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">A/I 零件腳未入(the food of the A/I component is not in) </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..95</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">手插零件腳未入(the food of the H/I component is not in)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..96</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳長(parts feet long)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">1..97</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳氧化(parts feet oxide)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯件(wrong component)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電阻錯件(resistance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">手插電阻錯件(H/I resistance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..111</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">阻值錯(resistance value wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..112</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">功率錯(power wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..113</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電容(component wrong to resistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..114</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..115</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯為二極體(component wrong to diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">A/I或SMD電阻錯件( A/I or SMD resistance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..121</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">阻值錯(resistance value wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..122</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">功率錯(power wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..123</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電容(component wrong to capacitance)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..124</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..125</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯為二極體(component wrong to diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">跳線錯件(jumper wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..131</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..132</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯為二極體(component wrong to diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..133</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電容(component wrong to capacitance)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..134</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電阻(component wrong to resistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..135</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線徑錯(wire diameter wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電容錯件(capacitance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">手插電容錯件(H/I capacitance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..211</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">容值錯(tolerance of capacitance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..212</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">耐壓錯(withstand voltage wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..213</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電阻(component wrong to resistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..214</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..215</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯為二極體(component wrong to diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">A/I或SMD電容錯件(A/I or SMD capacitance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..221</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">容值錯(tolerance of capacitance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..222</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">耐壓錯(withstand voltage wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..223</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電阻(component wrong to resistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..224</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..225</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯為二極體(component wrong to diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體錯(diode wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..31</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">手插二極體錯(H/I diode wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..311</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">型號錯(component type wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..312</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電阻(component wrong to resistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..313</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..314</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電容(component wrong to capacitance)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..32</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">A/I或SMD二極體錯(A/I or SMD diode wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..321</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">型號錯(component type wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..322</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電阻(component wrong to resistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..323</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成跳線(component wrong to jumper)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..324</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成電容(component wrong to capacitance)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">半橋錯件(bridge diode wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..41</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">型號錯(component type wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..42</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成雙極型三極體(component wrong to transistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..43</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成MOS三極體(component wrong to MOS-FET transistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..44</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成SCR(component wrong to SCR)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..45</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成三端穩壓源(component wrong to zener diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體錯件(transistance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..51</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">雙極型三極體錯件(transistance wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..511</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成MOS三極體(component wrong to MOS-FET transistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..512</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成SCR(component wrong to SCR)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..513</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成三端穩壓源(component wrong to zener diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..514</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成半橋(component wrong to bridge diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..52</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">MOS三極體錯件(MOS-FET transistor wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..521</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成雙極型三極體(component wrong to transistor)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..522</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成SCR(component wrong to SCR)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..523</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成三端穩壓源(component wrong to zener diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..524</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯成半橋(component wrong to bridge diode)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC錯件(IC wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">變壓器錯件(transformer wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電感錯件(choke wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">2..9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆錯件(bridge diode wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件插反(component polarity reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電解電容插反(Electrolytic  Capacitance polarity reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體插反(diode polarity reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體本體加工極性反(diode polarity preforming reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體手插插反(diode polarity insertion reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..23</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體A/I或SMD打反(A/I or SMD assembly revered)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體插反(transistance polarity reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC方向插反(IC insertion reversed)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材插錯(wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..51</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">+5V線插錯(+5V wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..52</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">+3.3V線插錯(+3.3V wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..53</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">+12V線插錯(+12V wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..54</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">-12V線插錯(-12V wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..55</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">+5Vsb(3.3Vsb)線插錯(+5V wire(3.3sb) insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..56</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">PG線插錯(PG wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..57</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">PS-on線插錯(PS-ON wire insertion wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">3..58</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">正負極線材插反</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊錫不良(soldering defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊錫短路(solder short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件腳間焊錫短路(pin short with pin)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件腳與銅箔焊錫短路(pin short with PCB)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件腳間錫渣短路(pin short with solder spatter )</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件腳與銅箔錫渣短路(pin short with solder spatter )</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..15</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件面元件腳間焊錫短路(pin short with pin on the component side)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..16</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件面元件腳間錫渣短路(pin short with solder spatter on the component side)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件腳壓銅箔短路(PCB short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊點空焊(no solder)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊點錫裂(solder crack)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">4..5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊點虛焊(thin solder)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元器件不良(component defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..0</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳未入</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳與機板螺絲相碰</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳長相碰</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳長與機殼相碰</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件腳處有異物</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電阻不良(resistor defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電阻短路(resistor short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電阻開路(resistor open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電阻阻值變(resistor value variable)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電阻本體破裂(body of resistor damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電容不良(capacitor defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電容短路(capacitor short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電容開路(capacitor open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..23</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電容容值變(capacitor value varied)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..24</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電容本體破裂(body of capacitor damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體不良(diode defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..31</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體短路(diode short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..32</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體開路(diode open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..33</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體正反向阻值變(diode value variable)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..34</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體本體破裂(body of diode damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..35</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體軟擊穿(diode puncture)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體不良(transistor defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..41</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體短路(transistor short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..42</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體開路(transistor open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..43</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體PN結正反向阻值變(雙極型)(resistance value of transistor variable)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..44</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體溝道正反向阻值變(MOS)(resistance value of transistor variable)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..45</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體本體破裂(body of transistor damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..46</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體軟擊穿(transistor puncture)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..47</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體參數不良(transistor parameter defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR不良(SCR defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..51</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR短路(SCR short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..52</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR開路(SCR open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..53</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR正反向阻值變(value of SCR variable)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..54</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR軟擊穿(SCR pucture)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..55</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR參數不良(SCR parameter defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..56</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SCR本體破裂(body of SCR damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..57</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子中線材錯位</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆不良(bridge diode defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..61</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆中二極體開路(bridge diode open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..62</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆中二極體短路(bridge diode short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..63</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆封裝不良(bridge diode package wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..64</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆中二極體正反向阻值變(bridge diode resistance value wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC不良(IC defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..71</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC引腳開路(pins of IC open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..72</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC引腳短路(pins of IC short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..73</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC本體參數不良(IC parameter defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..74</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC參數與電路匹配不良(IC parameter mismatch with the circuit)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">變壓器不良(transformer defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..81</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組開路(winding open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..82</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組匝間短路(winding short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..83</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組間短路(winding open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..84</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組引出線間焊錫短路(pins of winding short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..85</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組圈數不良(winding turns defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..86</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組間絕緣不良(windings insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..87</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組引出線位置錯(layout of windings defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電感不良(choke defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..91</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組開路(winding open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..92</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組匝間短路(winding short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..93</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組間短路(winding open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..94</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組與磁芯間短路(windings short with the core)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..95</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組圈數不良(winding turns defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..96</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電感量不良(inductance of choke defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..97</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電感磁芯破裂(core of choke demaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5..98</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">繞組引出線位置錯(layout of windings defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5.A</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其它元器件不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5.A1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">銅箔斷路</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5.A2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">銅箔短路</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5.A3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">開關管擊穿</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5.A4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">穩壓二極管擊穿</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">5.A5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">整流管擊穿</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其它(other)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">絕緣不良(insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">二極體與散熱片間絕緣不良(between diode and the heatsink insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">三極體與散熱片間絕緣不良(between transistor and the heatsink insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">半橋與散熱片間絕緣不良(between bridge diode and the heatsink insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">橋堆與散熱片間絕緣不良(between diode and the heatsink insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..15</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">熱敏電阻與散熱片間絕緣不良(between thermistor and the heatsink insulation damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..16</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">散熱片有毛刺刺破絕緣片引起絕緣不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..17</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">絕緣片鎖破</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..18</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">鎖晶體時絕緣片夾鋁屑</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..19</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">絕緣粒或絕緣片未裝</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材破損(wire damaged)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材破損銅線與機殼短路(case short with the damaged wire)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材破損與其他線材短路( the damaged wires short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..23</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材破損與其他元件引線短路(component short with the damaged wire)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">重調VR(readjust VR)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..31</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電壓不良重調VR(readjust VR due to voltage defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..32</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">OLP保護點不良重調VR(readjust VR due to OLP protection defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">誤測(CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..41</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電壓值誤測(voltage value CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..42</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">OLP保護點誤測(OLP protection CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..43</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">THD參數誤測(THD parameter CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..44</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">PF參數誤測(PF parameter CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..45</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">PG參數誤測(PG parameter CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..46</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">NOP誤測(NOP CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..47</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">ICT誤測(ICT CND)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子插拔不良( housing join defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..51</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">機內端子插不緊(housing insertion loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..52</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">輸出端子插不緊(output housing insertion loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..53</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電源端子插不緊(AC input housing insertion loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..54</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">機內端子未插緊(housing insertion loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..55</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">輸出端子未插緊(output housing insertion loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..56</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">電源端子未插緊(AC input housing insertion loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..57</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CN端子插反或未插</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其它</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..61</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">切換開關拔錯</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..62</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錳銅線匹配不良需加錫</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..63</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">IC匹配不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">6..64</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錳銅線與IC不匹配</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A0</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">誤判(No defect found)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺件(Missing)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A10</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳未出(Lead not protrusion)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫渣(Dregs solder)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">冷焊(Cold solder)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件相碰(Touching)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳位偏移(Lead wrong way)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A15</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳長(Long Lead)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A16</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">銅箔斷(PCB open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A17</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳位錯插(Solder wrong point)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A18</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">多件(More Component)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A19</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">組裝不良(Assembly NG.)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺錫(No solder)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A20</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">重調(ReAddjust volt.)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">SSW調錯(SSW Set wrong)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">銅箔短路(PCB short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A23</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">重調高度(Adjust Resistance)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A24</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">斷裂(LOOSE)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A25</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">連錫</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫短(Solder short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯件(Wrong Part)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">反件(Reverse)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件互換(Alternate)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">位置偏移(Position ship)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">破損(Broken)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">A9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">空焊(Rise up)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C0</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件不良(Component wrong value)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件短路(Component short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C10</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫渣</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件開路(Component open)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫裂</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">阻值偏低(Component leak)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">G與S極短路</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">2,13腳短路</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳短</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">2,12,13腳短</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">C9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">阻值偏高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX00</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件開路</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件短路</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">阻抗偏低</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">阻抗偏高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">容值偏低</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX06</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">容值偏高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX07</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">感量偏低</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX08</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">感量偏高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX09</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">壓降偏低</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX10</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">壓降偏高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">极性反</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">出腳偏移</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">彈片松動</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳分叉</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX15</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">破裂</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX16</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bois線接地不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX17</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Pin腳交叉</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX18</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">本体偏移</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX19</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">按鍵不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX20</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Wifi module不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">CX22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Relay不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">DX01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">設計干涉</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">DX02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">零件不匹配</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">DX03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">設計誤差</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX00</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其他</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">重測OK</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">測試設定錯</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">更改程式</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">設備故障</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">人為誤測</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">OX06</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">修改規格</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">P1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">更改程式(Adjust Program test)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">SX01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">SX02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">多件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">SX03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">SX04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">紅膠過多</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">SX05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件偏移</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">T01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">TEST</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">外觀不良(Visual defeat)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子不良(housing defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子破損/刮傷(housing break/scratch)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.10</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子針下陷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.1a</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子粗細不一</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.1b</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子燒黃</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子燙傷/燒黃(housing scald/scorch)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子裝反(housing turn over)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子沾膠(housing paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子印字不清(housing print unclear)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子髒污(housing pollute)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">側鉤斷裂/變形(housing hook break off/deformation)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子印字重復(housing print iterance)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子下陷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.91</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子變形</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.1.92</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">端子來料不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.10.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳墊不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.10.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳墊沾膠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.10.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳墊浮高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.10.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳墊破損</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.10.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳墊脫落</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材不良(cable defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材破損(cable pierce)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材燙傷(cable scald)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材沾膠(cable paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材脫落(cable pin break off)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材髒污(cable pollute)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材短(cable short)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE夾線(cable be nip by case)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">漏束線(missing cable tie)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材來料不良(cable material income defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.2.91</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">線材SR口變形</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE不良(case defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.10</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE斷差</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE溢膠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE掉漆</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE頂傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LOGO 貼反</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.15</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LOGO 翹起</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE刮傷(case scratch)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE變形(case deformation)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE氧化(case rust)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE沾膠(case paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE機角變形(case angle deformation)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE間隙大(case excessive gap)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE來料不良(case material income defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE髒污(case pollute)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.91</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE壓傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.92</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE美工縫大</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.93</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE美工縫小</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.94</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE壓亮點</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.95</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE斷差</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.96</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE溢膠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.97</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE熔接不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.98</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE來料不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.3.99</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">CASE 燙傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座不良(AC inlet defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座刮傷(AC inlet scratch)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座斷裂(AC inlet break off)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.3.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座-鐵芯鬆動(iron core loose)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.3.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座-鐵芯變形(iron core deformation)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.3.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座-鐵芯髮黃(iron core scorch)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.3.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座-鐵芯沾膠(iron core paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座浮高(AC inlet lifting)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.41</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座燙傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.42</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座沾膠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.43</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插座來料不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.4.44</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">插頭內有異物</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">螺絲不良(screw defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.5.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">螺絲浮高(screw lifting)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.5.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">漏鎖螺絲(missing screw)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.5.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">螺絲氧化(screw oxidize)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.5.31</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">螺絲來料不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">網面不良(fan mask defect )</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.6.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">網面沾膠(fan mask paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.6.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">網面有毛刺(fan mask burr)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">風扇不良(fan defect)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.7.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">風扇葉沾膠(fan leaf paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.7.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">風扇葉斷裂(fan leaf break off)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良(other defeat)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-機內有異物(PSU eyewinker)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-PCB板未卡到位、沾膠(PCB aberrancy/paste glue)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-客戶預留孔堵塞(customer obligate hole block up)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-客戶預留孔未攻牙(customer obligate hole thread non-tattep)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-客戶預留孔變形(customer obligate hole deformation)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-客戶預留孔氧化(customer obligate hole deformation oxidize)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-漏蓋印章(missing sigil)</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.8.8</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">其餘不良-漏貼機內小標簽/條碼(lable or bar code not be sealed in the PSU )</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED 燈不良</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED燈刮傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.2</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED燈壓傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.3</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED燈沾膠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED燈內異物</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.5</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED燈內黑點</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.6</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">LED燈裝反</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">Visual.9.7</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">燈罩損傷</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錯件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">反件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">掉件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳未出</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA06</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳短</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA07</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳長</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA08</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳位插錯</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA09</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件位置互換</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA10</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">浮高</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA11</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">組裝不到位</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA12</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">彎腳方向錯</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA13</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">傾斜相碰</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA14</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">漏貼膠紙</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA15</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">膠紙未貼到位</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WA16</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">漏套套管</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">重調VR</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">破損</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">斷裂</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">剪腳錫裂</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">多余元件腳</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO06</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">多余螺絲</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO07</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">多余异物</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WO08</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">腳未清除</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">空焊</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS02</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">連錫</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS03</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫渣</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS04</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫珠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS05</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">包焊</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS06</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫灰</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS07</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">溢錫</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS21</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">空焊</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS22</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">連錫</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS23</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫渣</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS24</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫珠</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS25</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">包焊</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS26</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">冷焊</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS27</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫絲</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS41</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">錫裂</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS42</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊盤脫落</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS43</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">焊盤氧化</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS44</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">元件氧化</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS45</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">沾膠導致空焊</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WS46</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">補焊損坏PCB</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">WZ01</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">缺件</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>
