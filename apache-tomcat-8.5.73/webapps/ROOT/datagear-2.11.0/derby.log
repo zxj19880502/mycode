@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Jan 22 19:19:32 CST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-8183-49aa-000001c8d400 
+on database directory C:\Users\xiaolong_zhu\.datagear\derby with class loader org.springframework.boot.loader.LaunchedURLClassLoader@45283ce2 
+Loaded from jar:file:/F:/Program%20Files/apache-tomcat-8.5.73/webapps/ROOT/datagear-2.11.0/datagear-2.11.0.jar!/WEB-INF/lib/derby-10.14.2.0.jar!/
+java.vendor=Oracle Corporation
+java.runtime.version=15.0.1+9-18
+user.dir=F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT\datagear-2.11.0
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

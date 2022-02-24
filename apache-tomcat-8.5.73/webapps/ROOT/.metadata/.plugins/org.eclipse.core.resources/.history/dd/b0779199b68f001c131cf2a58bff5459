@@ -1,0 +1,173 @@
+<%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
+ 
+<%@ page import="java.sql.*" %>
+ 
+ <meta http-equiv="refresh" content="300">
+ 
+<html>
+<head>
+ 
+  <title>工单查询</title> 
+ <style type="text/css">
+#container {
+    height: 70%;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 1em auto;
+}
+
+#datatable {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+#datatable caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+#datatable th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+#datatable td,
+#datatable th,
+#datatable caption {
+    padding: 0.5em;
+}
+
+#datatable thead tr,
+#datatable tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+#datatable tr:hover {
+    background: #f1f7ff;
+}
+
+		</style>
+ 
+</head>
+<body> 
+
+
+
+
+
+
+
+<%
+Class.forName("oracle.jdbc.driver.OracleDriver");
+ Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@172.22.24.221:1521:ledmes1","sajet","tech");
+Statement stmt=connection.createStatement();
+String path = request.getContextPath(); 
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+String name = request.getParameter("workorder");//用request得到 
+
+
+
+ResultSet rs=stmt.executeQuery("SELECT PDLINE_NAME,PROCESS_NAME ,SUM(PASS_QTY)as good,SUM(FAIL_QTY)as Fail,sum(PASS_QTY+FAIL_QTY)as input,round(SUM(PASS_QTY)/sum(PASS_QTY+FAIL_QTY)*100,2)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE WORK_ORDER='"+name+"' ) GROUP BY PROCESS_NAME,PDLINE_NAME ORDER BY Fail DESC  ");
+
+
+
+
+%>
+<figure class="highcharts-figure">
+    <div id="container"></div>
+<table id="datatable">
+    <tr>
+        <td>PROCESS_NAME/PDLINE_NAME</td>
+       
+        <td>output</td>
+        <td>Fail</td>
+        <td>input</td>
+        <td>Yield(%)</td>
+    </tr>
+    
+    <% while(rs.next()){ %>
+ 
+    <tr>
+        <td><%=rs.getString(1)%>/<%=rs.getString(2)%></td>    
+        <td><%=rs.getString(3)%></td>
+        <td><%=rs.getString(4)%></td>
+        <td><%=rs.getString(5)%></td>
+         <td><%=rs.getString(6)%></td>
+    </tr>
+ 
+    <% } %>
+</table>
+<script type="text/javascript">
+window.onload = function() {
+    // 第4列
+    var column_num = 3;
+                                      
+    // 获取元素
+    var table = document.getElementById("datatable"),
+        rows = table.getElementsByTagName("tr");
+                                      
+    // 循环表格
+    for(var i = 0; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName("td");
+        for(var c = 0; c < cells.length; c++) {
+            // 对应列
+            if(c + 1 === column_num
+                // 判断是否大于 0
+                && parseFloat(cells[c].innerHTML) > 0) {
+                // 两者均成立，改变颜色
+                rows[i].style.color = "#f00";
+                // 检查下一行
+                break;
+            }
+        }
+    }
+};
+</script>
+</figure>
+<script src="highcharts.js"></script>
+<script src="data.js"></script>
+<script src="exporting.js"></script>
+<script src="accessibility.js"></script>
+
+<script type="text/javascript">
+Highcharts.chart('container', {
+    data: {
+        table: 'datatable'
+    },
+    chart: {
+        type: 'bar'
+    },
+   
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Units'
+        }
+    },
+    title: {
+		text: 'kanban'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+    credits:{
+        enabled: false // 禁用版权信息
+   },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+                this.point.y + ' ' + this.point.name.toLowerCase();
+        }
+    }
+});
+		</script>
+</body>
+</html>

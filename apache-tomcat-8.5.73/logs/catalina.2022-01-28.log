@@ -1,0 +1,81 @@
+28-Jan-2022 15:11:30.862 資訊 [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Jan-2022 15:11:30.864 資訊 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Jan-2022 15:11:31.276 資訊 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Jan-2022 15:11:31.304 資訊 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Jan-2022 15:11:31.307 資訊 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Jan-2022 15:13:12.019 警告 [main] org.apache.catalina.core.AprLifecycleListener.init The Apache Tomcat Native library failed to load. The error reported was [F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform]
+	java.lang.UnsatisfiedLinkError: F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+		at java.lang.ClassLoader.loadLibrary(Unknown Source)
+		at java.lang.Runtime.loadLibrary0(Unknown Source)
+		at java.lang.System.loadLibrary(Unknown Source)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:41)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:173)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:202)
+		at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+		at org.apache.catalina.connector.Connector.setProtocol(Connector.java:641)
+		at org.apache.catalina.connector.Connector.<init>(Connector.java:81)
+		at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:62)
+		at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1235)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1496)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+		at java.lang.reflect.Method.invoke(Unknown Source)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+28-Jan-2022 15:13:12.091 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+28-Jan-2022 15:13:12.091 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+28-Jan-2022 15:13:12.092 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+28-Jan-2022 15:13:12.092 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Jan-2022 15:13:12.093 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Jan-2022 15:13:12.093 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86
+28-Jan-2022 15:13:12.093 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files (x86)\Java\jre1.8.0_202
+28-Jan-2022 15:13:12.094 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+28-Jan-2022 15:13:12.094 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Jan-2022 15:13:12.094 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         F:\Program Files\apache-tomcat-8.5.73
+28-Jan-2022 15:13:12.094 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         F:\Program Files\apache-tomcat-8.5.73
+28-Jan-2022 15:13:12.095 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=F:\Program Files\apache-tomcat-8.5.73\conf\logging.properties
+28-Jan-2022 15:13:12.095 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2022 15:13:12.095 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2022 15:13:12.095 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2022 15:13:12.096 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Jan-2022 15:13:12.096 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=F:\Program Files\apache-tomcat-8.5.73
+28-Jan-2022 15:13:12.096 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=F:\Program Files\apache-tomcat-8.5.73
+28-Jan-2022 15:13:12.096 資訊 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=F:\Program Files\apache-tomcat-8.5.73\temp
+28-Jan-2022 15:13:12.354 資訊 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Jan-2022 15:13:12.855 資訊 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Jan-2022 15:13:12.864 資訊 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1116 ms
+28-Jan-2022 15:13:12.894 資訊 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Jan-2022 15:13:12.894 資訊 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+28-Jan-2022 15:13:12.902 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\docs]
+28-Jan-2022 15:13:13.909 資訊 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jan-2022 15:13:13.943 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\docs] has finished in [1,040] ms
+28-Jan-2022 15:13:13.943 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\examples]
+28-Jan-2022 15:13:15.111 資訊 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jan-2022 15:13:15.151 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\examples] has finished in [1,208] ms
+28-Jan-2022 15:13:15.151 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]
+28-Jan-2022 15:13:15.895 資訊 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jan-2022 15:13:15.898 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager] has finished in [747] ms
+28-Jan-2022 15:13:15.898 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\manager]
+28-Jan-2022 15:13:16.604 資訊 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jan-2022 15:13:16.607 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\manager] has finished in [709] ms
+28-Jan-2022 15:13:16.607 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]
+28-Jan-2022 15:13:17.289 資訊 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Jan-2022 15:13:17.304 資訊 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT] has finished in [697] ms
+28-Jan-2022 15:13:17.306 資訊 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Jan-2022 15:13:17.312 資訊 [main] org.apache.catalina.startup.Catalina.start Server startup in 4448 ms

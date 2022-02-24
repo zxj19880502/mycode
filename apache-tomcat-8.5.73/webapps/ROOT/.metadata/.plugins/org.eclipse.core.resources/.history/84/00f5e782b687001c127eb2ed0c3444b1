@@ -1,0 +1,123 @@
+
+<%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
+
+
+<form id="form1" name="form1" method="get" action="time.jsp">
+   <label> 日期<br /></label>
+    <label>
+    <input type="text" id="time" value="" onclick="this.name=this.id;;" />
+    </label>
+    
+        
+    <label>
+    <input type="submit" id="button" value="时间查询" />
+    </label>
+</form>
+<form id="form1" name="form1" method="get" action="test.jsp">
+   
+     <label>工单<br /></label> 
+    <input type="text" id="workorder" value="" onclick="this.name=this.id;" />
+     
+    <label>
+    <input type="submit" id="button" value="工单查询" />
+    </label>
+</form>
+
+<form id="form1" name="form1" method="get" action="line.jsp">
+  
+  <label> 日期<br /></label>
+   <label>
+    <input type="text" id="time" value="" onclick="this.name=this.id;;" />
+    </label></br>
+     <label>线别<br /></label> 
+   
+     <SELECT NAME="line" style=" width:175px">
+    
+<option  value="LED_W16">LED_W16</option>
+<option  value="LED_W15">LED_W15</option>
+<option  value="LED_W99">LED_W99</option>
+<option  value="BFCTEST">BFCTEST</option>
+<option  value="LED_W14">LED_W14</option>
+<option  value="LED_W13">LED_W13</option>
+<option  value="LED_W12">LED_W12</option>
+<option  value="LED_W11">LED_W11</option>
+<option  value="LED_W10">LED_W10</option>
+<option  value="LED_W09">LED_W09</option>
+<option  value="LED_W08">LED_W08</option>
+<option  value="LED_W07">LED_W07</option>
+<option  value="LED_W06">LED_W06</option>
+<option  value="LED_W05">LED_W05</option>
+<option  value="LED_TP3">LED_TP3</option>
+<option  value="LED_S99">LED_S99</option>
+<option  value="LED_L99">LED_L99</option>
+<option  value="LED_T99">LED_T99</option>
+<option  value="LED_W04">LED_W04</option>
+<option  value="LED_W03">LED_W03</option>
+<option  value="LED_S06">LED_S06</option>
+<option  value="LED_L09">LED_L09</option>
+<option  value="LED_L08">LED_L08</option>
+<option  value="LED_W02">LED_W02</option>
+<option  value="LED_S05">LED_S05</option>
+<option  value="CSBTEST">CSBTEST</option>
+<option  value="LED_TP2">LED_TP2</option>
+<option  value="LED_TP1">LED_TP1</option>
+<option  value="LED_W01">LED_W01</option>
+<option  value="LED_L07">LED_L07</option>
+<option  value="LED_S01">LED_S01</option>
+<option  value="LED_S04">LED_S04</option>
+<option  value="LED_S03">LED_S03</option>
+<option  value="LED_S02">LED_S02</option>
+<option  value="LED_L02">LED_L02</option>
+<option  value="LED_L01">LED_L01</option>
+<option  value="LED_L06">LED_L06</option>
+<option  value="LED_L05">LED_L05</option>
+<option  value="LED_L04">LED_L04</option>
+<option  value="LED_L03">LED_L03</option>
+<option  value="SMT-L01">SMT-L01</option>
+<option  value="SMT-L09">SMT-L09</option>
+<option  value="SMT-L12">SMT-L12</option>
+<option  value="SMT-L11">SMT-L11</option>
+<option  value="AI-2">AI-2</option>
+<option  value="HSZ_L21">HSZ_L21</option>
+<option  value="SMT-L05">SMT-L05</option>
+<option  value="SMT-L04">SMT-L04</option>
+<option  value="SMT-L03">SMT-L03</option>
+<option  value="SMT-L06">SMT-L06</option>
+<option  value="SMT-L07">SMT-L07</option>
+<option  value="SMT-L08">SMT-L08</option>
+<option  value="SMT-L10">SMT-L10</option>
+<option  value="SMT-L02">SMT-L02</option>
+<option  value="RI-1">RI-1</option>
+<option  value="HSZ_L20">HSZ_L20</option>
+<option  value="HSZ_L19">HSZ_L19</option>
+<option  value="HSZ_L18">HSZ_L18</option>
+<option  value="HSZ_L17">HSZ_L17</option>
+<option  value="HSZ_L16">HSZ_L16</option>
+<option  value="HSZ_L15">HSZ_L15</option>
+<option  value="HSZ_L14">HSZ_L14</option>
+<option  value="HSZ_L13">HSZ_L13</option>
+<option  value="HSZ_L12">HSZ_L12</option>
+<option  value="HSZ_L11">HSZ_L11</option>
+<option  value="HSZ_L10">HSZ_L10</option>
+<option  value="HSZ_L09">HSZ_L09</option>
+<option  value="HSZ_L08">HSZ_L08</option>
+<option  value="HSZ_L07">HSZ_L07</option>
+<option  value="HSZ_L06">HSZ_L06</option>
+<option  value="HSZ_L05">HSZ_L05</option>
+<option  value="HSZ_L04">HSZ_L04</option>
+<option  value="HSZ_L03">HSZ_L03</option>
+<option  value="HSZ_L02">HSZ_L02</option>
+<option  value="HSZ_L01">HSZ_L01</option>
+<option  value="AI-1">AI-1</option>
+
+</SELECT>
+    
+    <label>
+    <input type="submit" id="button" value="线别查询" />
+    </label>
+    
+    
+  
+    
+    
+</form>

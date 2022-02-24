@@ -1,0 +1,331 @@
+<%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
+ <%@ page import="java.text.*"%>
+<%@ page import="java.sql.*" %>
+ <%@page import="java.util.*"%>
+
+<meta http-equiv="refresh" content="300">
+
+<html>
+ 
+
+ 
+<head>
+ 
+  <title>时间查询</title>
+ 
+ 
+<style type="text/css">
+#container {
+    height: 70%;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+  
+    margin: 1em auto;
+}
+
+#datatable {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+   
+    text-align: center;
+    font-size:10px;
+    
+}
+
+
+
+#datatable td,
+#datatable th,
+#datatable caption {
+    padding: 0.1em;
+}
+
+#datatable thead tr,
+#datatable tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+#datatable tr:hover {
+    background: #f1f7ff;
+}
+
+		</style>
+</head>
+ <body>
+
+<%
+
+Class.forName("oracle.jdbc.driver.OracleDriver");
+ 
+Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@172.22.24.221:1521:ledmes1","sajet","tech");
+
+Statement stmt=connection.createStatement();
+
+Statement stmtc=connection.createStatement();
+Statement cc=connection.createStatement();
+Statement dd=connection.createStatement();
+
+Statement hja=connection.createStatement();
+Statement wip=connection.createStatement();
+
+String path = request.getContextPath(); 
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+String starday = request.getParameter("day");//用request得到 
+String startime = request.getParameter("time");//用request得到 
+String endday = request.getParameter("endday");//用request得到 
+String endtime = request.getParameter("endtime");//用request得到
+String datetime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());//系统时间变量
+ResultSet rs =stmt.executeQuery("SELECT PROCESS_NAME ,sum(LED_TP1) LED_TP1,sum(LED_TP2) LED_TP2,sum(LED_TP3) LED_TP3,sum(LED_S01) LED_S01,sum(LED_S02) LED_S02,sum(LED_S03) LED_S03,sum(LED_S04) LED_S04,sum(LED_S05) LED_S05,sum(LED_S06) LED_S06,sum(LED_L01) LED_L01,sum(LED_L02) LED_L02,sum(LED_L03) LED_L03,sum(LED_L04) LED_L04,sum(LED_L05) LED_L05,sum(LED_L06) LED_L06,sum(LED_L07) LED_L07,sum(LED_L08) LED_L08,sum(LED_L09) LED_L09,sum(LED_W01) LED_W01,sum(LED_W02) LED_W02,sum(LED_W03) LED_W03,sum(LED_W04) LED_W04,sum(LED_W05) LED_W05,sum(LED_W06) LED_W06,sum(LED_W07) LED_W07,sum(LED_W08) LED_W08,sum(LED_W09) LED_W09,sum(LED_W10) LED_W10,sum(LED_W11) LED_W11,sum(LED_W12) LED_W12,sum(LED_W13) LED_W13,sum(LED_W14) LED_W14,sum(LED_W15) LED_W15,sum(LED_W16) LED_W16,sum(LED_S99) LED_S99,sum(LED_L99) LED_L99,sum(LED_W99) LED_W99,sum(LED_T99) LED_T99 from(SELECT PDLINE_NAME,PROCESS_NAME, decode(PDLINE_NAME,'LED_TP1',input)LED_TP1,decode(PDLINE_NAME,'LED_W10',input) LED_W10,decode(PDLINE_NAME,'LED_W16',input) LED_W16 ,decode(PDLINE_NAME,'LED_W01',input) LED_W01 ,decode(PDLINE_NAME,'LED_L05',input) LED_L05,decode(PDLINE_NAME,'LED_S01',input) LED_S01,decode(PDLINE_NAME,'LED_S02',input) LED_S02 ,decode(PDLINE_NAME,'LED_L02',input) LED_L02 ,decode(PDLINE_NAME,'LED_L08',input) LED_L08 ,decode(PDLINE_NAME,'LED_L04',input) LED_L04 ,decode(PDLINE_NAME,'LED_L09',input) LED_L09,decode(PDLINE_NAME,'LED_TP2',input) LED_TP2,decode(PDLINE_NAME,'LED_W03',input) LED_W03 ,decode(PDLINE_NAME,'LED_L03',input) LED_L03 ,decode(PDLINE_NAME,'LED_W07',input) LED_W07,decode(PDLINE_NAME,'LED_W08',input) LED_W08,decode(PDLINE_NAME,'LED_S05',input) LED_S05 ,decode(PDLINE_NAME,'LED_W05',input) LED_W05 ,decode(PDLINE_NAME,'LED_W04',input) LED_W04 ,decode(PDLINE_NAME,'LED_TP3',input) LED_TP3 ,decode(PDLINE_NAME,'LED_S99',input) LED_S99,decode(PDLINE_NAME,'LED_W02',input) LED_W02,decode(PDLINE_NAME,'LED_S04',input) LED_S04 ,decode(PDLINE_NAME,'LED_S03',input) LED_S03 ,decode(PDLINE_NAME,'LED_W09',input) LED_W09,decode(PDLINE_NAME,'LED_L01',input) LED_L01,decode(PDLINE_NAME,'LED_L07',input) LED_L07 ,decode(PDLINE_NAME,'LED_W11',input) LED_W11 ,decode(PDLINE_NAME,'LED_L99',input) LED_L99 ,decode(PDLINE_NAME,'LED_W12',input) LED_W12 ,decode(PDLINE_NAME,'LED_S06',input) LED_S06 ,decode(PDLINE_NAME,'LED_W06',input) LED_W06 ,decode(PDLINE_NAME,'LED_L06',input) LED_L06 ,decode(PDLINE_NAME,'LED_W13',input) LED_W13 ,decode(PDLINE_NAME,'LED_W14',input) LED_W14 ,decode(PDLINE_NAME,'LED_W15',input) LED_W15 ,decode(PDLINE_NAME,'LED_W99',input) LED_W99 ,decode(PDLINE_NAME,'LED_T99',input) LED_T99 from INPUT_QTYC  WHERE WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"'))GROUP BY PROCESS_NAME ");
+ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME ,sum(INPUT)AS INPUT FROM input_qtyc  WHERE WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')  GROUP BY PROCESS_NAME");
+ResultSet wips =wip.executeQuery("SELECT '合计'AS heji, sum(PASS_QTY+FAIL_QTY)AS INPUT,sum(PASS_QTY)AS PASS_QTY,sum(FAIL_QTY)AS fail, SUM(REPASS_QTY)AS REPASS FROM G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID WHERE WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')");
+
+ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round(decode(SUM(PASS_QTY),0,0,(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY)))*100),2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 不良代码,Defect_Desc 不良描述, SUMCOUNT 数量 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 不良代码,Defect_Desc 不良描述, SUMCOUNT 数量 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+%>
+<tr><td>数据更新时间：<%=datetime %></td></tr>
+    
+    
+    
+<table id="datatable" border="1">
+
+    <tr> 
+    
+    
+  <td style="background: #027806;color: #fff">Operation</td>
+       
+         <td style="background: #027806;color: #fff">LED_TP1</td>
+         <td style="background: #027806;color: #fff">LED_TP2</td>
+         <td style="background: #027806;color: #fff">LED_TP3</td>
+         <td style="background: #027806;color: #fff">LED_S01</td>
+         <td style="background: #027806;color: #fff">LED_S02</td>
+         <td style="background: #027806;color: #fff">LED_S03</td>
+         <td style="background: #027806;color: #fff">LED_S04</td>
+         <td style="background: #027806;color: #fff">LED_S05</td>
+         <td style="background: #027806;color: #fff">LED_S06</td>
+         <td style="background: #027806;color: #fff">LED_L01</td>
+         <td style="background: #027806;color: #fff">LED_L02</td>
+         <td style="background: #027806;color: #fff">LED_L03</td>
+         <td style="background: #027806;color: #fff">LED_L04</td>
+         <td style="background: #027806;color: #fff">LED_L05</td>
+         <td style="background: #027806;color: #fff">LED_L06</td>
+         <td style="background: #027806;color: #fff">LED_L07</td>
+         <td style="background: #027806;color: #fff">LED_L08</td>
+         <td style="background: #027806;color: #fff">LED_L09</td>
+         <td style="background: #027806;color: #fff">LED_W01</td>
+         <td style="background: #027806;color: #fff">LED_W02</td>
+         <td style="background: #027806;color: #fff">LED_W03</td>
+         <td style="background: #027806;color: #fff">LED_W04</td>
+         <td style="background: #027806;color: #fff">LED_W05</td>
+         <td style="background: #027806;color: #fff">LED_W06</td>
+         <td style="background: #027806;color: #fff">LED_W07</td>
+         <td style="background: #027806;color: #fff">LED_W08</td >
+         <td style="background: #027806;color: #fff">LED_W09</td>
+         <td style="background: #027806;color: #fff">LED_W10</td>
+         <td style="background: #027806;color: #fff">LED_W11</td>
+         <td style="background: #027806;color: #fff">LED_W12</td>
+         <td style="background: #027806;color: #fff">LED_W13</td>
+         <td style="background: #027806;color: #fff">LED_W14</td>
+         <td style="background: #027806;color: #fff">LED_W15</td>
+         <td style="background: #027806;color: #fff">LED_W16</td>
+         <td style="background: #027806;color: #fff">LED_S99</td>
+         <td style="background: #027806;color: #fff">LED_L99</td>
+         <td style="background: #027806;color: #fff">LED_W99</td>
+         <td style="background: #027806;color: #fff">LED_T99</td>
+
+       </tr>
+      
+       
+          <% while(rs.next()){ %>
+        
+        <tr style="background: #ffffd1">
+       
+           <td style=" background: #cb99fa"> <%=rs.getString(1)%></td>
+            <td> <%=rs.getString(2)%></td>
+             <td> <%=rs.getString(3)%></td>
+              <td> <%=rs.getString(4)%></td>
+               <td> <%=rs.getString(5)%></td>
+                <td> <%=rs.getString(6)%></td>
+                 <td> <%=rs.getString(7)%></td>
+                  <td> <%=rs.getString(8)%></td>
+                   <td> <%=rs.getString(9)%></td>
+                    <td> <%=rs.getString(10)%></td>
+                     <td> <%=rs.getString(11)%></td>
+                      <td> <%=rs.getString(12)%></td>
+                       <td> <%=rs.getString(13)%></td>
+                        <td> <%=rs.getString(14)%></td>
+                         <td> <%=rs.getString(15)%></td>
+                          <td> <%=rs.getString(16)%></td>
+                           <td> <%=rs.getString(17)%></td>
+                            <td> <%=rs.getString(18)%></td>
+                             <td> <%=rs.getString(19)%></td>
+                              <td> <%=rs.getString(20)%></td>
+                               <td> <%=rs.getString(21)%></td>
+                                <td> <%=rs.getString(22)%></td>
+                                 <td> <%=rs.getString(23)%></td>
+                                  <td> <%=rs.getString(24)%></td>
+                                   <td> <%=rs.getString(25)%></td>
+                                    <td> <%=rs.getString(26)%></td>
+                                     <td> <%=rs.getString(27)%></td>
+                                      <td> <%=rs.getString(28)%></td>
+                                      <td> <%=rs.getString(29)%></td>
+                                       <td> <%=rs.getString(30)%></td>
+                                        <td> <%=rs.getString(31)%></td>
+                                         <td> <%=rs.getString(32)%></td>
+                                          <td> <%=rs.getString(33)%></td>
+                                           <td> <%=rs.getString(34)%></td> 
+                                            <td> <%=rs.getString(35)%></td> 
+                                             <td> <%=rs.getString(36)%></td> 
+                                              <td> <%=rs.getString(37)%></td> 
+                                               <td> <%=rs.getString(38)%></td>
+                                               <td> <%=rs.getString(39)%></td> 
+                                          
+    
+  
+     <% } %>
+    
+
+  </tr>    
+  
+
+   
+ 
+  
+ <table  style="position:absolute;top:550px;left:9px;width: 290px;font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:10px">
+  <tr>
+      <td style="background: #94c9ff;border: 1px solid #ebebeb;">PDLINE_NAME  </td>
+       <td style="background: #94c9ff;border: 1px solid #ebebeb;">INPUT</td>
+          <td style="background: #94c9ff;border: 1px solid #ebebeb;">GOOD</td>
+          <td style="background: #94c9ff;border: 1px solid #ebebeb;">Fail_QTY</td>
+           <td style="background: #94c9ff;border: 1px solid #ebebeb;">YIELD</td>
+  </tr>
+ 
+  <% while(rc.next()){ %>
+    <tr>
+       
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rc.getString(1)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rc.getString(2)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rc.getString(3)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rc.getString(4)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rc.getString(5)%></td>
+          </tr>
+    
+  <% } %>
+  </table>
+ <table style="position:absolute;top:550px;left:730px;width: 420px;font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:10px">
+  <tr>
+	
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">不良代码(白班)</td>
+         <td style="background: #94c9ff;border: 1px solid #ebebeb;">不良描述(白班)</td>
+          <td style="background: #94c9ff;border: 1px solid #ebebeb;">数量(白班)</td>
+          </tr>
+       
+  
+ 
+  <% while(rb.next()){ %>
+    <tr>
+       
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rb.getString(1)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rb.getString(2)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rb.getString(3)%></td>
+          </tr>
+  
+  <% } %>
+ <table style="position:absolute;top:550px;left:330px;;width: 420;font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:10px">
+  <tr>
+	
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">不良代码(夜班)</td>
+         <td style="background: #94c9ff;border: 1px solid #ebebeb;">不良描述(夜班)</td>
+          <td style="background: #94c9ff;border: 1px solid #ebebeb;">数量(夜班)</td>
+          </tr>
+       
+  
+ 
+  <% while(rf.next()){ %>
+    <tr>
+       
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rf.getString(1)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rf.getString(2)%></td>
+           <td style=" background: #fcfe9d;border: 1px solid #ebebeb;"> <%=rf.getString(3)%></td>
+          </tr>
+  
+  <% } %>
+  
+</table>
+	
+	
+	 <table  style="position:absolute;top:29px;left:2350px;width: 20%; font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:10px">
+  <tr>
+	
+        <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">Operation</td>
+         <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">INPUT</td>
+         <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">良品数量</td>
+         <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">不良数量</td>
+         <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">维修数量</td>
+          
+          </tr>
+       
+  
+ 
+  <% while(hjb.next()){ %>
+    <tr>
+       
+           <td style=" background: #cb99fa;border: 1px solid #ebebeb;"> <%=hjb.getString(1)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=hjb.getString(2)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=hjb.getString(3)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=hjb.getString(4)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=hjb.getString(5)%></td>
+           
+          </tr>
+  
+  <% } %>
+  
+</table>	
+	
+	
+	
+	
+	
+		 <table style="position:absolute;top:550px;left:2350px;width: 20%;font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:10px">
+  <tr>
+	
+        <td style=" width:130px; background: #027806;color: #fff;border: 1px solid #ebebeb;">合计</td>
+        <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">INPUT</td>
+         <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">良品数量</td>
+          <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">不良数量</td>
+         <td style="background: #027806;color: #fff;border: 1px solid #ebebeb;">维修数量</td>
+          </tr>
+       
+  
+ 
+  <% while(wips.next()){ %>
+    <tr>
+       
+           <td  style="background: #cb99fa;border: 1px solid #ebebeb;"> <%=wips.getString(1)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=wips.getString(2)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=wips.getString(3)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=wips.getString(4)%></td>
+           <td style=" background: #94c9ff;border: 1px solid #ebebeb;"> <%=wips.getString(5)%></td>
+          </tr>
+  
+  <% } %>
+  
+</table>
+	
+	
+	
+	
+	
+	
+ </table>
+ 
+  </table>
+
+
+
+ 
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="F:/Program Files/apache-tomcat-8.5.73/webapps/ROOT/test1/lib/classes12.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="F:/Program Files/apache-tomcat-8.5.73/webapps/ROOT/test1/lib/ojdbc5.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="F:/Program Files/apache-tomcat-8.5.73/webapps/ROOT/test1/lib/ojdbc6.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="F:/Program Files/apache-tomcat-8.5.73/webapps/ROOT/WEB-INF/jstl-1.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,32 @@
+
+<%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
+
+
+
+
+
+<form id="form1" name="form1" method="get" action="line.jsp">
+  
+  <label> 日期</label>
+   <label>
+    <input type="text" id="time" value="" onclick="this.name=this.id;;" />
+    </label>
+     <label>时间
+   
+     <SELECT NAME="line" style=" width:175px">
+    
+<option  value="LED_W16">LED_W16</option>
+<option  value="LED_W15">LED_W15</option>
+
+
+</SELECT>
+    </label> 
+    <label>
+    <input type="submit" id="button" value="线别查询" />
+    </label>
+    
+    
+  
+    
+    
+</form>

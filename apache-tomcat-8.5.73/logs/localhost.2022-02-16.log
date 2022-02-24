@@ -1,0 +1,1738 @@
+16-Feb-2022 08:09:19.036 严重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='LED_L01'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='LED_L01'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='LED_L01'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='LED_L01'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:10:40.813 严重 [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:11:01.849 严重 [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:11:06.503 严重 [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:11:12.162 严重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:11:16.679 严重 [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+line cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:12:37.976 严重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [85] 行发生了一个错误
+line cannot be resolved to a variable
+82: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+83: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+84: 
+85: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND a.WORK_DATE||a.WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+86: 
+87: %>
+88: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [85] 行发生了一个错误
+time cannot be resolved to a variable
+82: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+83: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+84: 
+85: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND a.WORK_DATE||a.WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+86: 
+87: %>
+88: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [85] 行发生了一个错误
+day cannot be resolved to a variable
+82: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+83: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+84: 
+85: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND a.WORK_DATE||a.WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+86: 
+87: %>
+88: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [85] 行发生了一个错误
+line cannot be resolved to a variable
+82: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+83: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+84: 
+85: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND a.WORK_DATE||a.WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+86: 
+87: %>
+88: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [85] 行发生了一个错误
+time cannot be resolved to a variable
+82: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+83: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+84: 
+85: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND a.WORK_DATE||a.WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+86: 
+87: %>
+88: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [85] 行发生了一个错误
+day cannot be resolved to a variable
+82: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+83: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+84: 
+85: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+line+"'AND a.WORK_DATE||a.WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC ");
+86: 
+87: %>
+88: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:15:13.182 严重 [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:15:30.818 严重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:15:43.832 严重 [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:16:02.142 严重 [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:16:06.992 严重 [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:16:12.224 严重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:16:48.496 严重 [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [79] 行发生了一个错误
+Duplicate local variable basePath
+76: String path = request.getContextPath(); 
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("line");//鐢╮equest寰楀埌 
+79: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+80: String starday = request.getParameter("day");//鐢╮equest寰楀埌 
+81: String startime = request.getParameter("time");//鐢╮equest寰楀埌 
+82: String endday = request.getParameter("endday");//鐢╮equest寰楀埌 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND a.WORK_DATE ='"+time+"')) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:20:29.992 严重 [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 08:21:32.357 严重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	org.apache.jasper.JasperException: 无法为JSP编译类: 
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+time cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+JSP文件：[/test1/line.jsp] 的第 [86] 行发生了一个错误
+day cannot be resolved to a variable
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+time+""+day+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY GOOD DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 09:55:13.785 严重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [86] 行处理 [/test1/line.jsp] 时发生异常
+
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY FAIL_QTY DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00979: 不是 GROUP BY 表达式
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.line_jsp._jspService(line_jsp.java:200)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 09:55:16.141 严重 [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [86] 行处理 [/test1/line.jsp] 时发生异常
+
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY FAIL_QTY DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00979: 不是 GROUP BY 表达式
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.line_jsp._jspService(line_jsp.java:200)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 09:55:17.380 严重 [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [86] 行处理 [/test1/line.jsp] 时发生异常
+
+83: String endtime = request.getParameter("endtime");//鐢╮equest寰楀埌
+84: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());//绯荤粺鏃堕棿
+85: 
+86: ResultSet rs=stmt.executeQuery("SELECT PROCESS_NAME,SUM(PASS_QTY+REPASS_QTY)as good,sum(REFAIL_QTY +FAIL_QTY) as Fail,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE (PDLINE_NAME='"+name+"'AND WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"'))) GROUP BY PROCESS_NAME ORDER BY FAIL_QTY DESC   ");
+87: 
+88: %>
+89: 
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00979: 不是 GROUP BY 表达式
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.line_jsp._jspService(line_jsp.java:200)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+16-Feb-2022 17:06:39.562 严重 [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [89] 行处理 [/test1/time.jsp] 时发生异常
+
+86: ResultSet wips =wip.executeQuery("SELECT '鍚堣'AS heji, sum(PASS_QTY+FAIL_QTY)AS INPUT,sum(PASS_QTY)AS PASS_QTY,sum(FAIL_QTY)AS fail, SUM(REPASS_QTY)AS REPASS,CONCAT(round(decode(SUM(PASS_QTY),0,0,(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY)))*100),2),'%')AS yeald FROM G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID WHERE WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')");
+87: 
+88: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round(decode(SUM(PASS_QTY),0,0,(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY)))*100),2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) ");
+89: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ");
+90: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ");
+91: 
+92: ResultSet nq=nqc.executeQuery("SELECT PDLINE_NAME 绾垮埆,MODEL_ID model,defect_desc 涓嶈壇鎻忚堪,SAMPLING_SIZE SAMPLING,FAIL_QTY 涓嶈壇,PASS_QTY PASS,dppm FROM (SELECT D.PDLINE_NAME,A.MODEL_ID ,C.DEFECT_DESC,A.SAMPLING_SIZE ,A.FAIL_QTY,A.PASS_QTY,sum(FAIL_QTY/SAMPLING_SIZE*1000000)DPPM FROM G_QC_LOT A LEFT JOIN G_QC_SN_DEFECT B ON A.QC_LOTNO =B.QC_LOTNO LEFT JOIN SYS_DEFECT C ON B.DEFECT_ID =C.DEFECT_ID LEFT JOIN SYS_PDLINE D ON A.PDLINE_ID =D.PDLINE_ID WHERE END_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY D.PDLINE_NAME,A.MODEL_ID ,C.DEFECT_DESC,A.SAMPLING_SIZE ,A.FAIL_QTY,A.PASS_QTY ORDER BY A.FAIL_QTY DESC )");
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00936: 缺失表达式
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:203)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)

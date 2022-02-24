@@ -1,0 +1,238 @@
+17-Feb-2022 17:07:05.268 警告 [main] org.apache.catalina.core.AprLifecycleListener.init 基于APR的本地库加载失败.错误报告为[F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform]
+	java.lang.UnsatisfiedLinkError: F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+		at java.lang.ClassLoader.loadLibrary(Unknown Source)
+		at java.lang.Runtime.loadLibrary0(Unknown Source)
+		at java.lang.System.loadLibrary(Unknown Source)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:41)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:173)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:202)
+		at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+		at org.apache.catalina.connector.Connector.setProtocol(Connector.java:641)
+		at org.apache.catalina.connector.Connector.<init>(Connector.java:81)
+		at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:62)
+		at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1235)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1496)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+		at java.lang.reflect.Method.invoke(Unknown Source)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+17-Feb-2022 17:07:05.319 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.73
+17-Feb-2022 17:07:05.321 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Nov 11 2021 13:14:36 UTC
+17-Feb-2022 17:07:05.321 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      8.5.73.0
+17-Feb-2022 17:07:05.322 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+17-Feb-2022 17:07:05.322 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+17-Feb-2022 17:07:05.322 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              x86
+17-Feb-2022 17:07:05.322 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jre1.8.0_202
+17-Feb-2022 17:07:05.323 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_202-b08
+17-Feb-2022 17:07:05.323 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+17-Feb-2022 17:07:05.323 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:05.324 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:05.324 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=F:\Program Files\apache-tomcat-8.5.73\conf\logging.properties
+17-Feb-2022 17:07:05.324 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Feb-2022 17:07:05.324 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+17-Feb-2022 17:07:05.325 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+17-Feb-2022 17:07:05.325 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+17-Feb-2022 17:07:05.325 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:05.325 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:05.325 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=F:\Program Files\apache-tomcat-8.5.73\temp
+17-Feb-2022 17:07:05.417 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+17-Feb-2022 17:07:05.864 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Feb-2022 17:07:05.871 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 800 ms
+17-Feb-2022 17:07:05.903 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+17-Feb-2022 17:07:05.903 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/8.5.73]
+17-Feb-2022 17:07:05.911 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\docs]
+17-Feb-2022 17:07:07.026 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:07.071 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\docs]的部署已在[1,158]毫秒内完成
+17-Feb-2022 17:07:07.071 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\examples]
+17-Feb-2022 17:07:08.268 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:08.310 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\examples]的部署已在[1,239]毫秒内完成
+17-Feb-2022 17:07:08.311 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]
+17-Feb-2022 17:07:09.150 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:09.157 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]的部署已在[846]毫秒内完成
+17-Feb-2022 17:07:09.157 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\manager]
+17-Feb-2022 17:07:09.930 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:09.937 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\manager]的部署已在[780]毫秒内完成
+17-Feb-2022 17:07:09.937 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]
+17-Feb-2022 17:07:10.755 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:10.761 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]的部署已在[824]毫秒内完成
+17-Feb-2022 17:07:10.764 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+17-Feb-2022 17:07:10.770 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 4898 ms
+17-Feb-2022 17:07:16.215 信息 [main] org.apache.catalina.core.StandardServer.await 通过关闭端口接收到有效的关闭命令。正在停止服务器实例。
+17-Feb-2022 17:07:16.217 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+17-Feb-2022 17:07:16.615 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+17-Feb-2022 17:07:16.638 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+17-Feb-2022 17:07:16.639 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+17-Feb-2022 17:07:44.027 警告 [main] org.apache.catalina.core.AprLifecycleListener.init 基于APR的本地库加载失败.错误报告为[F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform]
+	java.lang.UnsatisfiedLinkError: F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+		at java.lang.ClassLoader.loadLibrary(Unknown Source)
+		at java.lang.Runtime.loadLibrary0(Unknown Source)
+		at java.lang.System.loadLibrary(Unknown Source)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:41)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:173)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:202)
+		at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+		at org.apache.catalina.connector.Connector.setProtocol(Connector.java:641)
+		at org.apache.catalina.connector.Connector.<init>(Connector.java:81)
+		at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:62)
+		at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1235)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1496)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+		at java.lang.reflect.Method.invoke(Unknown Source)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+17-Feb-2022 17:07:44.076 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.73
+17-Feb-2022 17:07:44.077 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Nov 11 2021 13:14:36 UTC
+17-Feb-2022 17:07:44.077 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      8.5.73.0
+17-Feb-2022 17:07:44.078 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+17-Feb-2022 17:07:44.078 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+17-Feb-2022 17:07:44.078 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              x86
+17-Feb-2022 17:07:44.079 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jre1.8.0_202
+17-Feb-2022 17:07:44.079 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_202-b08
+17-Feb-2022 17:07:44.079 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+17-Feb-2022 17:07:44.080 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:44.080 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:44.080 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=F:\Program Files\apache-tomcat-8.5.73\conf\logging.properties
+17-Feb-2022 17:07:44.080 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Feb-2022 17:07:44.081 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+17-Feb-2022 17:07:44.081 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+17-Feb-2022 17:07:44.081 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+17-Feb-2022 17:07:44.081 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:44.081 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:07:44.082 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=F:\Program Files\apache-tomcat-8.5.73\temp
+17-Feb-2022 17:07:44.191 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+17-Feb-2022 17:07:44.635 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Feb-2022 17:07:44.642 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 808 ms
+17-Feb-2022 17:07:44.674 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+17-Feb-2022 17:07:44.674 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/8.5.73]
+17-Feb-2022 17:07:44.681 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\docs]
+17-Feb-2022 17:07:45.782 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:45.819 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\docs]的部署已在[1,137]毫秒内完成
+17-Feb-2022 17:07:45.820 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\examples]
+17-Feb-2022 17:07:46.846 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:46.890 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\examples]的部署已在[1,070]毫秒内完成
+17-Feb-2022 17:07:46.891 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]
+17-Feb-2022 17:07:47.730 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:47.737 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]的部署已在[846]毫秒内完成
+17-Feb-2022 17:07:47.738 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\manager]
+17-Feb-2022 17:07:48.528 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:48.535 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\manager]的部署已在[797]毫秒内完成
+17-Feb-2022 17:07:48.536 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]
+17-Feb-2022 17:07:49.363 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:07:49.369 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]的部署已在[833]毫秒内完成
+17-Feb-2022 17:07:49.372 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+17-Feb-2022 17:07:49.378 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 4735 ms
+17-Feb-2022 17:10:33.205 信息 [main] org.apache.catalina.core.StandardServer.await 通过关闭端口接收到有效的关闭命令。正在停止服务器实例。
+17-Feb-2022 17:10:33.207 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+17-Feb-2022 17:10:33.593 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+17-Feb-2022 17:10:33.620 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+17-Feb-2022 17:10:33.624 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+17-Feb-2022 17:10:36.216 警告 [main] org.apache.catalina.core.AprLifecycleListener.init 基于APR的本地库加载失败.错误报告为[F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform]
+	java.lang.UnsatisfiedLinkError: F:\Program Files\apache-tomcat-8.5.73\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+		at java.lang.ClassLoader.loadLibrary(Unknown Source)
+		at java.lang.Runtime.loadLibrary0(Unknown Source)
+		at java.lang.System.loadLibrary(Unknown Source)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:41)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:173)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:202)
+		at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+		at org.apache.catalina.connector.Connector.setProtocol(Connector.java:641)
+		at org.apache.catalina.connector.Connector.<init>(Connector.java:81)
+		at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:62)
+		at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1235)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+		at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+		at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1496)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:611)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+		at java.lang.reflect.Method.invoke(Unknown Source)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+17-Feb-2022 17:10:36.265 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.73
+17-Feb-2022 17:10:36.265 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Nov 11 2021 13:14:36 UTC
+17-Feb-2022 17:10:36.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号:      8.5.73.0
+17-Feb-2022 17:10:36.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+17-Feb-2022 17:10:36.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+17-Feb-2022 17:10:36.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              x86
+17-Feb-2022 17:10:36.268 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jre1.8.0_202
+17-Feb-2022 17:10:36.268 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    1.8.0_202-b08
+17-Feb-2022 17:10:36.268 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+17-Feb-2022 17:10:36.268 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:10:36.269 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:10:36.270 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.config.file=F:\Program Files\apache-tomcat-8.5.73\conf\logging.properties
+17-Feb-2022 17:10:36.270 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Feb-2022 17:10:36.270 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djdk.tls.ephemeralDHKeySize=2048
+17-Feb-2022 17:10:36.270 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+17-Feb-2022 17:10:36.271 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dignore.endorsed.dirs=
+17-Feb-2022 17:10:36.271 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.base=F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:10:36.271 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Dcatalina.home=F:\Program Files\apache-tomcat-8.5.73
+17-Feb-2022 17:10:36.271 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：       -Djava.io.tmpdir=F:\Program Files\apache-tomcat-8.5.73\temp
+17-Feb-2022 17:10:36.362 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+17-Feb-2022 17:10:36.806 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Feb-2022 17:10:36.814 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 790 ms
+17-Feb-2022 17:10:36.846 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+17-Feb-2022 17:10:36.846 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/8.5.73]
+17-Feb-2022 17:10:36.853 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\docs]
+17-Feb-2022 17:10:37.958 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:10:37.993 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\docs]的部署已在[1,138]毫秒内完成
+17-Feb-2022 17:10:37.993 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\examples]
+17-Feb-2022 17:10:39.020 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:10:39.060 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\examples]的部署已在[1,067]毫秒内完成
+17-Feb-2022 17:10:39.061 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]
+17-Feb-2022 17:10:39.898 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:10:39.904 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\host-manager]的部署已在[843]毫秒内完成
+17-Feb-2022 17:10:39.904 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\manager]
+17-Feb-2022 17:10:40.679 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:10:40.684 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\manager]的部署已在[780]毫秒内完成
+17-Feb-2022 17:10:40.685 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]
+17-Feb-2022 17:10:41.477 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 至少有一个JAR被扫描用于TLD但尚未包含TLD。 为此记录器启用调试日志记录，以获取已扫描但未在其中找到TLD的完整JAR列表。 在扫描期间跳过不需要的JAR可以缩短启动时间和JSP编译时间。
+17-Feb-2022 17:10:41.489 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[F:\Program Files\apache-tomcat-8.5.73\webapps\ROOT]的部署已在[804]毫秒内完成
+17-Feb-2022 17:10:41.493 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+17-Feb-2022 17:10:41.500 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 4685 ms

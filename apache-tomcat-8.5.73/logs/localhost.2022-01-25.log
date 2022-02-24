@@ -1,0 +1,2247 @@
+25-Jan-2022 06:37:46.592 嚴重 [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/test1/time.jsp] at line [97]
+
+94:         <td>Yield(%)</td>
+95:     </tr>
+96:     
+97:     <% while(rs.next()){ %>
+98:  
+99:     <tr>
+100:         <td><%=rs.getString(1)%>/<%=rs.getString(2)%></td>
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: ORA-01476: 除數等於 0
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.fetch(T4CStatement.java:1017)
+		at oracle.jdbc.driver.OracleResultSetImpl.close_or_fetch_from_next(OracleResultSetImpl.java:290)
+		at oracle.jdbc.driver.OracleResultSetImpl.next(OracleResultSetImpl.java:212)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:213)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 10:45:42.015 嚴重 [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+num cannot be resolved to a variable
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td id="d"><%=num%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+num cannot be resolved to a variable
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td id="d"><%=num%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:08:37.350 嚴重 [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+The left-hand side of an assignment must be a variable
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td class="heji"id="d"><%=request.getAttribute("$("#"d)")%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+Syntax error on token "Invalid Character", invalid AssignmentOperator
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td class="heji"id="d"><%=request.getAttribute("$("#"d)")%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+The left-hand side of an assignment must be a variable
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td class="heji"id="d"><%=request.getAttribute("$("#"d)")%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+Syntax error on token "Invalid Character", invalid AssignmentOperator
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td class="heji"id="d"><%=request.getAttribute("$("#"d)")%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:15:06.463 嚴重 [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+d cannot be resolved to a variable
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td id="d"><%=request.getAttribute($(d))%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [110] in the jsp file: [/test1/line.jsp]
+d cannot be resolved to a variable
+107:     
+108:     <tr>
+109:         <td></td>
+110:         <td id="d"><%=request.getAttribute($(d))%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:21:05.021 嚴重 [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+dt cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+dt cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+dt cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+dt cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = dt.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = dt.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:22:02.741 嚴重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+td cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+td cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+td cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+td cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = td.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = td.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:22:24.734 嚴重 [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+The method AsEnumerable() is undefined for the type line_jsp
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+The method AsEnumerable() is undefined for the type line_jsp
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+The method AsEnumerable() is undefined for the type line_jsp
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+The method AsEnumerable() is undefined for the type line_jsp
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:23:12.608 嚴重 [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+ff cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+ff cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+ff cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+105:    
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+ff cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Syntax error on token ">", delete this token
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Convert cannot be resolved
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+row cannot be resolved to a variable
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+An error occurred at line: [109] in the jsp file: [/test1/line.jsp]
+Type mismatch: cannot convert from String to int
+106:     <% } %>
+107:     <% 
+108:     double num = ff.AsEnumerable().Select(row => Convert.ToDouble(row["a"])).Sum();
+109:  double num2 = ff.AsEnumerable().Sum(row => Convert.ToDouble(row["a"]));
+110:  %>
+111:     <tr>
+112:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:27:13.602 嚴重 [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+String literal is not properly closed by a double-quote
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter("<%=rs.getString(2)%>");//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+String literal is not properly closed by a double-quote
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter("<%=rs.getString(2)%>");//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:27:48.067 嚴重 [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+The left-hand side of an assignment must be a variable
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter(<%=rs.getString(2)%>);//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token "<", ) expected
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter(<%=rs.getString(2)%>);//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter(<%=rs.getString(2)%>);//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+The left-hand side of an assignment must be a variable
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter(<%=rs.getString(2)%>);//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error on token "<", ) expected
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter(<%=rs.getString(2)%>);//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+105:   
+106:     <% } %>
+107:   <%
+108:    double cd = request.getParameter(<%=rs.getString(2)%>);//鐢╮equest寰楀埌 
+109:    %>
+110:     <tr>
+111:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:31:14.303 嚴重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+String literal is not properly closed by a double-quote
+105:   
+106:     <% } %>
+107:   <%
+108:    String cd = sum("<%=a%>") 
+109:    
+110:    %>
+111:     <tr>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [108] in the jsp file: [/test1/line.jsp]
+String literal is not properly closed by a double-quote
+105:   
+106:     <% } %>
+107:   <%
+108:    String cd = sum("<%=a%>") 
+109:    
+110:    %>
+111:     <tr>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 11:35:20.699 嚴重 [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/test1/line.jsp] at line [110]
+
+107:  
+108:     <tr>
+109:         <td></td>
+110:         <td id="d"><%=rs.getString(2)%></td>
+111:         <td id="e"></td>
+112:          <td id="f"></td>
+113:         <td></td>
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: 不正確的資料欄索引
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:145)
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:207)
+		at oracle.jdbc.driver.OracleResultSetImpl.getString(OracleResultSetImpl.java:378)
+		at org.apache.jsp.test1.line_jsp._jspService(line_jsp.java:240)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:26:46.820 嚴重 [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: javax.el.ELException: Failed to parse the expression [${#totalRow}]] with root cause
+	javax.el.ELException: The identifier [#totalRow] is not a valid Java identifier as required by section 1.19 of the EL specification (Identifier ::= Java language identifier). This check can be disabled by setting the system property org.apache.el.parser.SKIP_IDENTIFIER_CHECK to true.
+		at org.apache.el.parser.AstIdentifier.setImage(AstIdentifier.java:176)
+		at org.apache.el.parser.ELParser.Identifier(ELParser.java:2077)
+		at org.apache.el.parser.ELParser.NonLiteral(ELParser.java:1781)
+		at org.apache.el.parser.ELParser.ValuePrefix(ELParser.java:1586)
+		at org.apache.el.parser.ELParser.Value(ELParser.java:1525)
+		at org.apache.el.parser.ELParser.Unary(ELParser.java:1506)
+		at org.apache.el.parser.ELParser.Multiplication(ELParser.java:1219)
+		at org.apache.el.parser.ELParser.Math(ELParser.java:1124)
+		at org.apache.el.parser.ELParser.Concatenation(ELParser.java:1073)
+		at org.apache.el.parser.ELParser.Compare(ELParser.java:847)
+		at org.apache.el.parser.ELParser.Equality(ELParser.java:722)
+		at org.apache.el.parser.ELParser.And(ELParser.java:657)
+		at org.apache.el.parser.ELParser.Or(ELParser.java:592)
+		at org.apache.el.parser.ELParser.Choice(ELParser.java:543)
+		at org.apache.el.parser.ELParser.Assignment(ELParser.java:271)
+		at org.apache.el.parser.ELParser.Semicolon(ELParser.java:203)
+		at org.apache.el.parser.ELParser.Expression(ELParser.java:196)
+		at org.apache.el.parser.ELParser.DynamicExpression(ELParser.java:162)
+		at org.apache.el.parser.ELParser.CompositeExpression(ELParser.java:46)
+		at org.apache.el.lang.ExpressionBuilder.createNodeInternal(ExpressionBuilder.java:118)
+		at org.apache.el.lang.ExpressionBuilder.build(ExpressionBuilder.java:179)
+		at org.apache.el.lang.ExpressionBuilder.createValueExpression(ExpressionBuilder.java:243)
+		at org.apache.el.ExpressionFactoryImpl.createValueExpression(ExpressionFactoryImpl.java:60)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.prepareExpression(Validator.java:1642)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:771)
+		at org.apache.jasper.compiler.Node$ELExpression.accept(Node.java:959)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2385)
+		at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2437)
+		at org.apache.jasper.compiler.Node$Visitor.visit(Node.java:2443)
+		at org.apache.jasper.compiler.Node$Root.accept(Node.java:471)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2385)
+		at org.apache.jasper.compiler.Validator.validateExDirectives(Validator.java:1869)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:220)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:374)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:27:02.640 嚴重 [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: javax.el.ELException: Failed to parse the expression [${#totalRow}]] with root cause
+	javax.el.ELException: The identifier [#totalRow] is not a valid Java identifier as required by section 1.19 of the EL specification (Identifier ::= Java language identifier). This check can be disabled by setting the system property org.apache.el.parser.SKIP_IDENTIFIER_CHECK to true.
+		at org.apache.el.parser.AstIdentifier.setImage(AstIdentifier.java:176)
+		at org.apache.el.parser.ELParser.Identifier(ELParser.java:2077)
+		at org.apache.el.parser.ELParser.NonLiteral(ELParser.java:1781)
+		at org.apache.el.parser.ELParser.ValuePrefix(ELParser.java:1586)
+		at org.apache.el.parser.ELParser.Value(ELParser.java:1525)
+		at org.apache.el.parser.ELParser.Unary(ELParser.java:1506)
+		at org.apache.el.parser.ELParser.Multiplication(ELParser.java:1219)
+		at org.apache.el.parser.ELParser.Math(ELParser.java:1124)
+		at org.apache.el.parser.ELParser.Concatenation(ELParser.java:1073)
+		at org.apache.el.parser.ELParser.Compare(ELParser.java:847)
+		at org.apache.el.parser.ELParser.Equality(ELParser.java:722)
+		at org.apache.el.parser.ELParser.And(ELParser.java:657)
+		at org.apache.el.parser.ELParser.Or(ELParser.java:592)
+		at org.apache.el.parser.ELParser.Choice(ELParser.java:543)
+		at org.apache.el.parser.ELParser.Assignment(ELParser.java:271)
+		at org.apache.el.parser.ELParser.Semicolon(ELParser.java:203)
+		at org.apache.el.parser.ELParser.Expression(ELParser.java:196)
+		at org.apache.el.parser.ELParser.DynamicExpression(ELParser.java:162)
+		at org.apache.el.parser.ELParser.CompositeExpression(ELParser.java:46)
+		at org.apache.el.lang.ExpressionBuilder.createNodeInternal(ExpressionBuilder.java:118)
+		at org.apache.el.lang.ExpressionBuilder.build(ExpressionBuilder.java:179)
+		at org.apache.el.lang.ExpressionBuilder.createValueExpression(ExpressionBuilder.java:243)
+		at org.apache.el.ExpressionFactoryImpl.createValueExpression(ExpressionFactoryImpl.java:60)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.prepareExpression(Validator.java:1642)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:771)
+		at org.apache.jasper.compiler.Node$ELExpression.accept(Node.java:959)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2385)
+		at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2437)
+		at org.apache.jasper.compiler.Node$Visitor.visit(Node.java:2443)
+		at org.apache.jasper.compiler.Node$Root.accept(Node.java:471)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2385)
+		at org.apache.jasper.compiler.Validator.validateExDirectives(Validator.java:1869)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:220)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:374)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:27:10.950 嚴重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [org.apache.jasper.JasperException: javax.el.ELException: Failed to parse the expression [${#totalRow}]] with root cause
+	javax.el.ELException: The identifier [#totalRow] is not a valid Java identifier as required by section 1.19 of the EL specification (Identifier ::= Java language identifier). This check can be disabled by setting the system property org.apache.el.parser.SKIP_IDENTIFIER_CHECK to true.
+		at org.apache.el.parser.AstIdentifier.setImage(AstIdentifier.java:176)
+		at org.apache.el.parser.ELParser.Identifier(ELParser.java:2077)
+		at org.apache.el.parser.ELParser.NonLiteral(ELParser.java:1781)
+		at org.apache.el.parser.ELParser.ValuePrefix(ELParser.java:1586)
+		at org.apache.el.parser.ELParser.Value(ELParser.java:1525)
+		at org.apache.el.parser.ELParser.Unary(ELParser.java:1506)
+		at org.apache.el.parser.ELParser.Multiplication(ELParser.java:1219)
+		at org.apache.el.parser.ELParser.Math(ELParser.java:1124)
+		at org.apache.el.parser.ELParser.Concatenation(ELParser.java:1073)
+		at org.apache.el.parser.ELParser.Compare(ELParser.java:847)
+		at org.apache.el.parser.ELParser.Equality(ELParser.java:722)
+		at org.apache.el.parser.ELParser.And(ELParser.java:657)
+		at org.apache.el.parser.ELParser.Or(ELParser.java:592)
+		at org.apache.el.parser.ELParser.Choice(ELParser.java:543)
+		at org.apache.el.parser.ELParser.Assignment(ELParser.java:271)
+		at org.apache.el.parser.ELParser.Semicolon(ELParser.java:203)
+		at org.apache.el.parser.ELParser.Expression(ELParser.java:196)
+		at org.apache.el.parser.ELParser.DynamicExpression(ELParser.java:162)
+		at org.apache.el.parser.ELParser.CompositeExpression(ELParser.java:46)
+		at org.apache.el.lang.ExpressionBuilder.createNodeInternal(ExpressionBuilder.java:118)
+		at org.apache.el.lang.ExpressionBuilder.build(ExpressionBuilder.java:179)
+		at org.apache.el.lang.ExpressionBuilder.createValueExpression(ExpressionBuilder.java:243)
+		at org.apache.el.ExpressionFactoryImpl.createValueExpression(ExpressionFactoryImpl.java:60)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.prepareExpression(Validator.java:1642)
+		at org.apache.jasper.compiler.Validator$ValidateVisitor.visit(Validator.java:771)
+		at org.apache.jasper.compiler.Node$ELExpression.accept(Node.java:959)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2385)
+		at org.apache.jasper.compiler.Node$Visitor.visitBody(Node.java:2437)
+		at org.apache.jasper.compiler.Node$Visitor.visit(Node.java:2443)
+		at org.apache.jasper.compiler.Node$Root.accept(Node.java:471)
+		at org.apache.jasper.compiler.Node$Nodes.visit(Node.java:2385)
+		at org.apache.jasper.compiler.Validator.validateExDirectives(Validator.java:1869)
+		at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:220)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:374)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:35:24.442 嚴重 [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [107] in the jsp file: [/test1/line.jsp]
+good cannot be resolved or is not a field
+104:         <td><%=rs.getString(5)%></td>
+105:     </tr>
+106:     
+107:   <tr><td><%=rs.good%></td></tr>
+108:     <% } %>
+109:  
+110:     
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [107] in the jsp file: [/test1/line.jsp]
+good cannot be resolved or is not a field
+104:         <td><%=rs.getString(5)%></td>
+105:     </tr>
+106:     
+107:   <tr><td><%=rs.good%></td></tr>
+108:     <% } %>
+109:  
+110:     
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:39:26.261 嚴重 [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [111] in the jsp file: [/test1/line.jsp]
+The left-hand side of an assignment must be a variable
+108:     <% } %>
+109:  
+110:     
+111:       <% (rs.next()){ %>
+112:    
+113:     <tr >
+114:         <td></td>
+
+
+An error occurred at line: [111] in the jsp file: [/test1/line.jsp]
+Syntax error, insert "AssignmentOperator Expression" to complete Assignment
+108:     <% } %>
+109:  
+110:     
+111:       <% (rs.next()){ %>
+112:    
+113:     <tr >
+114:         <td></td>
+
+
+An error occurred at line: [111] in the jsp file: [/test1/line.jsp]
+Syntax error, insert ";" to complete Statement
+108:     <% } %>
+109:  
+110:     
+111:       <% (rs.next()){ %>
+112:    
+113:     <tr >
+114:         <td></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [111] in the jsp file: [/test1/line.jsp]
+The left-hand side of an assignment must be a variable
+108:     <% } %>
+109:  
+110:     
+111:       <% (rs.next()){ %>
+112:    
+113:     <tr >
+114:         <td></td>
+
+
+An error occurred at line: [111] in the jsp file: [/test1/line.jsp]
+Syntax error, insert "AssignmentOperator Expression" to complete Assignment
+108:     <% } %>
+109:  
+110:     
+111:       <% (rs.next()){ %>
+112:    
+113:     <tr >
+114:         <td></td>
+
+
+An error occurred at line: [111] in the jsp file: [/test1/line.jsp]
+Syntax error, insert ";" to complete Statement
+108:     <% } %>
+109:  
+110:     
+111:       <% (rs.next()){ %>
+112:    
+113:     <tr >
+114:         <td></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:101)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:41:49.097 嚴重 [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/test1/line.jsp] at line [114]
+
+111:      
+112:    
+113:     <tr >
+114:         <td><%=rs.getString(1)%></td>
+115:         <td ><%=rs.getString(2)%></td>
+116:         <td ><%=rs.getString(3)%></td>
+117:          <td><%=rs.getString(4)%></td>
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: 不正確的資料欄索引
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:145)
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:207)
+		at oracle.jdbc.driver.OracleResultSetImpl.getString(OracleResultSetImpl.java:378)
+		at org.apache.jsp.test1.line_jsp._jspService(line_jsp.java:244)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 13:41:50.089 嚴重 [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/test1/line.jsp] at line [114]
+
+111:      
+112:    
+113:     <tr >
+114:         <td><%=rs.getString(1)%></td>
+115:         <td ><%=rs.getString(2)%></td>
+116:         <td ><%=rs.getString(3)%></td>
+117:          <td><%=rs.getString(4)%></td>
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: 不正確的資料欄索引
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:145)
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:207)
+		at oracle.jdbc.driver.OracleResultSetImpl.getString(OracleResultSetImpl.java:378)
+		at org.apache.jsp.test1.line_jsp._jspService(line_jsp.java:244)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+25-Jan-2022 14:41:33.632 嚴重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/test1/time.jsp] at line [80]
+
+77: String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+78: String name = request.getParameter("time");//鐢╮equest寰楀埌 
+79: String datetime = new SimpleDateFormat("yyyyMMdd").format(Calendar.getInstance().getTime());
+80: ResultSet rs=stmt.executeQuery("SELECT PDLINE_NAME,PROCESS_NAME,sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)as input,SUM(PASS_QTY+REPASS_QTY)as output,SUM(FAIL_QTY+REFAIL_QTY)as Fail,round(SUM(PASS_QTY+REPASS_QTY)/sum(PASS_QTY+REPASS_QTY+REFAIL_QTY +FAIL_QTY)*100,3)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID  WHERE WORK_DATE='"+datetime+"') GROUP BY PROCESS_NAME,PDLINE_NAME ORDER BY GOOD DESC ");
+81: 
+82: %>
+83: <figure class="highcharts-figure">
+
+
+Stacktrace:] with root cause
+	java.sql.SQLException: ORA-00904: "GOOD": 無效的 ID
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:194)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)

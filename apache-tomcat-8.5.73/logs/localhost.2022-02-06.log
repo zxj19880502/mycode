@@ -1,0 +1,583 @@
+06-Feb-2022 13:34:49.788 严重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-01476: 除数为 0
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:945)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1053)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:09:55.755 严重 [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-01476: 除数为 0
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:945)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1053)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:11:55.954 严重 [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-01476: 除数为 0
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:945)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1053)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:18:33.784 严重 [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round decode (sum(PASS_QTY+FAIL_QTY),0,null,(sum(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY)))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00909: 参数个数无效
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:19:28.386 严重 [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round decode (sum(PASS_QTY+FAIL_QTY),0,null,sum(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00909: 参数个数无效
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:20:09.223 严重 [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round( decode(sum(PASS_QTY+FAIL_QTY),0,null,sum(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY)))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00909: 参数个数无效
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:20:28.303 严重 [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(decode(sum(PASS_QTY+FAIL_QTY),0,null,sum(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00909: 参数个数无效
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:21:51.504 严重 [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,round( sum(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2)as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00909: 参数个数无效
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:22:18.656 严重 [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,round(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2)as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-01476: 除数为 0
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:945)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1053)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:23:35.831 严重 [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,round(PASS_QTY/sum(PASS_QTY+FAIL_QTY)*100,2)as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-00979: 不是 GROUP BY 表达式
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:789)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1030)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)
+06-Feb-2022 15:26:14.047 严重 [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke 在路径为的上下文中，Servlet[jsp]的Servlet.service（）引发了具有根本原因的异常在 [84] 行处理 [/test1/time.jsp] 时发生异常
+
+81: ResultSet hjb =hja.executeQuery("SELECT PROCESS_NAME,sum(INPUT)input FROM input_qtyc where WORK_DATE||WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"')GROUP BY PROCESS_NAME");
+82: 
+83: 
+84: ResultSet rc =stmtc.executeQuery("SELECT * FROM (SELECT PDLINE_NAME,sum(PASS_QTY+FAIL_QTY)as input,sum(PASS_QTY)as good,SUM(FAIL_QTY)AS FAIL_QTY,CONCAT(round(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY))*100,2),'%')as Yield from(select * from sajet.G_SN_COUNT a  LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE c  on a.PDLINE_ID = c.PDLINE_ID LEFT join sajet.G_WO_BASE d  on a.WORK_ORDER = d.WORK_ORDER WHERE A.WORK_DATE||A.WORK_TIME between to_CHAR('"+startime+""+starday+"')and to_char('"+endtime+""+endday+"') )GROUP BY PDLINE_NAME ORDER BY FAIL_QTY DESC ) WHERE ROWNUM <= 10");
+85: ResultSet rb =cc.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE) + 08/24 and TRUNC(SYSDATE) + 20/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+86: ResultSet rf=dd.executeQuery("SELECT distinct Defect_Code 涓嶈壇浠ｇ爜,Defect_Desc 涓嶈壇鎻忚堪, SUMCOUNT 鏁伴噺 FROM (SELECT F.Defect_Code , F.Defect_Desc ,SUM (A.DEFECT_QTY) SUMCOUNT FROM SAJET.G_SN_DEFECT A, SAJET.SYS_DEFECT F WHERE 1=1 and  A.REC_TIME >= (SYSDATE - 225)AND A.REC_TIME <  (SYSDATE) AND A.DEFECT_ID = F.DEFECT_ID AND  A.REC_TIME between TRUNC(SYSDATE-1) + 20/24 and TRUNC(SYSDATE) + 08/24 GROUP BY F.Defect_Code, F.Defect_Desc ORDER BY 3 DESC)WHERE ROWNUM <= 10");
+87: %>
+
+
+Stacktrace:
+	java.sql.SQLException: ORA-01476: 除数为 0
+
+		at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:111)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:330)
+		at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:287)
+		at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:742)
+		at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:206)
+		at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:945)
+		at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1053)
+		at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:829)
+		at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1123)
+		at oracle.jdbc.driver.OracleStatement.executeQuery(OracleStatement.java:1263)
+		at org.apache.jsp.test1.time_jsp._jspService(time_jsp.java:198)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:196)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:364)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:624)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1673)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Unknown Source)

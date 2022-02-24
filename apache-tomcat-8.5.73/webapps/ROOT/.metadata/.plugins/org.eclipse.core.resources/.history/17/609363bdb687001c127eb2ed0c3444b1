@@ -1,0 +1,50 @@
+
+<%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
+
+
+<form id="form1" name="form1" method="get" action="time.jsp">
+   <label> 日期<br /></label>
+    <label>
+    <input type="text" id="time" value="" onclick="this.name=this.id;;" />
+    </label>
+    
+        
+    <label>
+    <input type="submit" id="button" value="时间查询" />
+    </label>
+</form>
+<form id="form1" name="form1" method="get" action="test.jsp">
+   
+     <label>工单<br /></label> 
+    <input type="text" id="workorder" value="" onclick="this.name=this.id;" />
+     
+    <label>
+    <input type="submit" id="button" value="工单查询" />
+    </label>
+</form>
+
+<form id="form1" name="form1" method="get" action="line.jsp">
+  
+  <label> 日期<br /></label>
+   <label>
+    <input type="text" id="time" value="" onclick="this.name=this.id;;" />
+    </label></br>
+     <label>线别<br /></label> 
+   
+     <SELECT NAME="line" style=" width:175px">
+    
+<option  value="LED_W16">LED_W16</option>
+<option  value="LED_W15">LED_W15</option>
+
+
+</SELECT>
+    
+    <label>
+    <input type="submit" id="button" value="线别查询" />
+    </label>
+    
+    
+  
+    
+    
+</form>
