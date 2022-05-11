@@ -207,7 +207,7 @@
         <script src="assets/js/supersized-init.js" ></script>
         <script src="assets/js/scripts.js" ></script>
 <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
-    </body>
+    
 <div style="text-align:center;margin-top:42%;margin-left:15%;border: 1px solid #ebebeb;width: 80%;padding-bottom:12px;padding-top:10px;">
 <table>
 <form   action="fai.jsp"method="post"autocomplete="off" >
@@ -302,5 +302,6 @@
     </form>
     </table>
 </div>
+</body>
 </html>
 
