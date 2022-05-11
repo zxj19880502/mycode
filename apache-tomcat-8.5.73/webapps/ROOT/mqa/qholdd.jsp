@@ -49,14 +49,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 String startime = request.getParameter("time");//用request得到 
 String endtime = request.getParameter("endtime");//用request得到
 
+String day = request.getParameter("day");
 
 Statement cbbc=connection.createStatement();
 Statement jzz=connection.createStatement();
 
 
-ResultSet hold=cbbc.executeQuery("SELECT DATATIME2,SUM( LJSYS),SUM(LJCYS),CONCAT(round(decode(SUM(LJCYS),0,0,(SUM(LJCYS)/(sum(LJSYS)))*100),2),'%')AS 累计抽样比例,sum(DRDJSL),SUM(NONLJSYS),SUM(NONLJCYS),CONCAT(round(decode(SUM(NONLJCYS),0,0,(SUM(NONLJCYS)/(sum(NONLJSYS)))*100),2),'%')AS 累计抽样比例,sum(NONDRDJSL) FROM WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME2 ORDER BY DATATIME2");
+ResultSet hold=cbbc.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"'),SUM( LJSYS),SUM(LJCYS),CONCAT(round(decode(SUM(LJCYS),0,0,(SUM(LJCYS)/(sum(LJSYS)))*100),2),'%')AS 累计抽样比例,sum(DRDJSL),SUM(NONLJSYS),SUM(NONLJCYS),CONCAT(round(decode(SUM(NONLJCYS),0,0,(SUM(NONLJCYS)/(sum(NONLJSYS)))*100),2),'%')AS 累计抽样比例,sum(NONDRDJSL) FROM WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"')");
 
-ResultSet jzsl=jzz.executeQuery("SELECT DATATIME , JZ ,SL  ,HOLDYY ,FL ,CLZT  FROM WIQWMS.q_hold WHERE DATATIME  BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"')  ORDER BY DATATIME");
+ResultSet jzsl=jzz.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME,'YYYY/MM/DD'),'"+day+"') , JZ ,SL  ,HOLDYY ,FL ,CLZT  FROM WIQWMS.q_hold WHERE DATATIME  BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"')  ORDER BY TO_CHAR(TO_DATE(DATATIME,'YYYY/MM/DD'),'"+day+"')");
 
 %>
 	

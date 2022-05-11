@@ -226,6 +226,13 @@
     </label>
         
     <label>
+    <SELECT NAME="day" id="day" style=" width:80px;background: #fff;opacity:0.5;">
+      <option value="yyyy/mm/dd" >天</option>
+      <option value="iw" >周</option>
+      <option value="yyyy/mm" >月</option>
+      <option value="q" >季度</option>
+      <option value="yyyy" >年</option>
+    </select>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" id="button" value="FAI数据看板" />
     </label>
     
@@ -250,6 +257,13 @@
     </label>
         
     <label>
+    <SELECT NAME="day" id="day" style=" width:80px;background: #fff;opacity:0.5;">
+      <option value="yyyy/mm/dd" >天</option>
+      <option value="iw" >周</option>
+      <option value="yyyy/mm" >月</option>
+      <option value="q" >季度</option>
+      <option value="yyyy" >年</option>
+    </select>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" id="button" value="OOBA数据看板" />
     </label>
     
@@ -274,6 +288,14 @@
     </label>
         
     <label>
+    
+<SELECT NAME="day" id="day" style=" width:80px;background: #fff;opacity:0.5;">
+      <option value="yyyy/mm/dd" >天</option>
+      <option value="iw" >周</option>
+      <option value="yyyy/mm" >月</option>
+      <option value="q" >季度</option>
+      <option value="yyyy" >年</option>
+    </select>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" id="button" value="待验 Q HOLD" />
     </label>
     

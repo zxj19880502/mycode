@@ -48,16 +48,16 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
 String startime = request.getParameter("time");//用request得到 
 String endtime = request.getParameter("endtime");//用request得到
-
+String day = request.getParameter("day");
 
 Statement fai=connection.createStatement();
 Statement faid=connection.createStatement();
 Statement ccd=connection.createStatement();
 
-ResultSet rs=stmt.executeQuery("SELECT DATATIME1, round(decode(SUM(BHGPS),0,0,(SUM(BHGPS)/(sum(JCPS*5)))*100),2)AS PCFAI不良率,round(decode(SUM(NONBHGPS),0,0,(SUM(NONBHGPS)/(sum(NONJCPS*5)))*100),2)AS NonPCFAI不良率,round(decode(SUM(BLJS),0,0,(SUM(BLJS)/(sum(GDS)))*100),2)AS PC异常比例,round(decode(SUM(NONBLJS),0,0,(SUM(NONBLJS)/(sum(NONGDS)))*100),2)AS NonPC异常比例,round(decode(SUM(BLS),0,0,(SUM(BLS)/SUM(TRS)*1000000)),2)AS PCHiPOTDPPM,round(decode(SUM(NONBLS),0,0,(SUM(NONBLS)/SUM(NONTRS)*1000000)),2)AS NonPCHiPOTDPPM from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME1 ORDER BY DATATIME1");
-ResultSet faib=fai.executeQuery("SELECT DATATIME1, round(decode(SUM(BHGPS),0,0,(SUM(BHGPS)/(sum(JCPS*5)))*100),2)AS PCFAI不良率,round(decode(SUM(NONBHGPS),0,0,(SUM(NONBHGPS)/(sum(NONJCPS*5)))*100),2)AS NonPCFAI不良率 from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME1 ORDER BY DATATIME1");
-ResultSet faidd=faid.executeQuery("SELECT DATATIME1, round(decode(SUM(BLJS),0,0,(SUM(BLJS)/(sum(GDS)))*100),2)AS PC异常比例,round(decode(SUM(NONBLJS),0,0,(SUM(NONBLJS)/(sum(NONGDS)))*100),2)AS NonPC异常比例 from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME1 ORDER BY DATATIME1");
-ResultSet qcc=ccd.executeQuery("SELECT DATATIME1,round(decode(SUM(BLS),0,0,(SUM(BLS)/SUM(TRS)*1000000)),2)AS PCHiPOTDPPM,round(decode(SUM(NONBLS),0,0,(SUM(NONBLS)/SUM(NONTRS)*1000000)),2)AS NonPCHiPOTDPPM from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME1 ORDER BY DATATIME1");
+ResultSet rs=stmt.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"'), round(decode(SUM(BHGPS),0,0,(SUM(BHGPS)/(sum(JCPS*5)))*100),2)AS PCFAI不良率,round(decode(SUM(NONBHGPS),0,0,(SUM(NONBHGPS)/(sum(NONJCPS*5)))*100),2)AS NonPCFAI不良率,round(decode(SUM(BLJS),0,0,(SUM(BLJS)/(sum(GDS)))*100),2)AS PC异常比例,round(decode(SUM(NONBLJS),0,0,(SUM(NONBLJS)/(sum(NONGDS)))*100),2)AS NonPC异常比例,round(decode(SUM(BLS),0,0,(SUM(BLS)/SUM(TRS)*1000000)),2)AS PCHiPOTDPPM,round(decode(SUM(NONBLS),0,0,(SUM(NONBLS)/SUM(NONTRS)*1000000)),2)AS NonPCHiPOTDPPM from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"')");
+ResultSet faib=fai.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"'), round(decode(SUM(BHGPS),0,0,(SUM(BHGPS)/(sum(JCPS*5)))*100),2)AS PCFAI不良率,round(decode(SUM(NONBHGPS),0,0,(SUM(NONBHGPS)/(sum(NONJCPS*5)))*100),2)AS NonPCFAI不良率 from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"')");
+ResultSet faidd=faid.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"'), round(decode(SUM(BLJS),0,0,(SUM(BLJS)/(sum(GDS)))*100),2)AS PC异常比例,round(decode(SUM(NONBLJS),0,0,(SUM(NONBLJS)/(sum(NONGDS)))*100),2)AS NonPC异常比例 from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"')");
+ResultSet qcc=ccd.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"'),round(decode(SUM(BLS),0,0,(SUM(BLS)/SUM(TRS)*1000000)),2)AS PCHiPOTDPPM,round(decode(SUM(NONBLS),0,0,(SUM(NONBLS)/SUM(NONTRS)*1000000)),2)AS NonPCHiPOTDPPM from WIQWMS.MQA where DATATIME1 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME1,'YYYY/MM/DD'),'"+day+"')");
 
 %>
 	

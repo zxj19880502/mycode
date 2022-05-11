@@ -48,15 +48,15 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
 String startime = request.getParameter("time");//用request得到 
 String endtime = request.getParameter("endtime");//用request得到
-
+String day = request.getParameter("day");
 
 Statement ccdd=connection.createStatement();
 Statement cb=connection.createStatement();
 
 
-ResultSet rs=stmt.executeQuery("select DATATIME2, round(decode(SUM(WGBLS),0,0,(SUM(WGBLS)/SUM(LJCYS)*1000000)),2)AS PC外观DPPM,round(decode(SUM(NONWGBLS),0,0,(SUM(NONWGBLS)/SUM(NONLJCYS)*1000000)),2)AS NonPC外观DPPM,round(decode(SUM(WGBLS+NONWGBLS),0,0,(SUM(WGBLS+NONWGBLS)/SUM(LJCYS+NONLJCYS)*1000000)),2)AS total外观DPPM , round(decode(SUM(DXBLS),0,0,(SUM(DXBLS)/SUM(LJCYS)*1000000)),2)AS PC电性DPPM,round(decode(SUM(NONDXBLS),0,0,(SUM(NONDXBLS)/SUM(NONLJCYS)*1000000)),2)AS NonPC电性DPPM,round(decode(SUM(DXBLS +NONDXBLS),0,0,(SUM(DXBLS +NONDXBLS)/SUM(LJCYS +NONLJCYS)*1000000)),2)AS total电性DPPM from WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME2 ORDER BY DATATIME2");
-ResultSet qd=ccdd.executeQuery("SELECT DATATIME2, round(decode(SUM(WGBLS),0,0,(SUM(WGBLS)/SUM(LJCYS)*1000000)),2)AS PC外观DPPM,round(decode(SUM(DXBLS),0,0,(SUM(DXBLS)/SUM(LJCYS)*1000000)),2)AS PC电性DPPM from WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME2 ORDER BY DATATIME2");
-ResultSet cbb=cb.executeQuery("SELECT DATATIME2,round(decode(SUM(NONWGBLS),0,0,(SUM(NONWGBLS)/SUM(NONLJCYS)*1000000)),2)AS 制二外观DPPM, round(decode(SUM(NONDXBLS),0,0,(SUM(NONDXBLS)/SUM(NONLJCYS)*1000000)),2)AS 制二电性DPPM from WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY DATATIME2 ORDER BY DATATIME2");
+ResultSet rs=stmt.executeQuery("select TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"'), round(decode(SUM(WGBLS),0,0,(SUM(WGBLS)/SUM(LJCYS)*1000000)),2)AS PC外观DPPM,round(decode(SUM(NONWGBLS),0,0,(SUM(NONWGBLS)/SUM(NONLJCYS)*1000000)),2)AS NonPC外观DPPM,round(decode(SUM(WGBLS+NONWGBLS),0,0,(SUM(WGBLS+NONWGBLS)/SUM(LJCYS+NONLJCYS)*1000000)),2)AS total外观DPPM , round(decode(SUM(DXBLS),0,0,(SUM(DXBLS)/SUM(LJCYS)*1000000)),2)AS PC电性DPPM,round(decode(SUM(NONDXBLS),0,0,(SUM(NONDXBLS)/SUM(NONLJCYS)*1000000)),2)AS NonPC电性DPPM,round(decode(SUM(DXBLS +NONDXBLS),0,0,(SUM(DXBLS +NONDXBLS)/SUM(LJCYS +NONLJCYS)*1000000)),2)AS total电性DPPM from WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"')");
+ResultSet qd=ccdd.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"'), round(decode(SUM(WGBLS),0,0,(SUM(WGBLS)/SUM(LJCYS)*1000000)),2)AS PC外观DPPM,round(decode(SUM(DXBLS),0,0,(SUM(DXBLS)/SUM(LJCYS)*1000000)),2)AS PC电性DPPM from WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"')");
+ResultSet cbb=cb.executeQuery("SELECT TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"'),round(decode(SUM(NONWGBLS),0,0,(SUM(NONWGBLS)/SUM(NONLJCYS)*1000000)),2)AS 制二外观DPPM, round(decode(SUM(NONDXBLS),0,0,(SUM(NONDXBLS)/SUM(NONLJCYS)*1000000)),2)AS 制二电性DPPM from WIQWMS.OOBA where DATATIME2 BETWEEN to_CHAR('"+startime+"')AND to_char('"+endtime+"') GROUP BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"') ORDER BY TO_CHAR(TO_DATE(DATATIME2,'YYYY/MM/DD'),'"+day+"')");
 
 %>
 	
