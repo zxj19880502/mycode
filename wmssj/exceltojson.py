@@ -1,10 +1,13 @@
 import  xlrd
 import json
 import time
+import configparser
+cf=configparser.ConfigParser()
+secs=cf.sections()
 def readExcelData():
     data = []             
     
-    keyData=('SerialNumber','StationName','STARTING_DATE','ENDING_DATE','GooglePartNumber','LINE','WORK_ORDER','WO_STATUS','RESULT')
+    keyData=['SerialNumber','StationName','STARTING_DATE','ENDING_DATE','GooglePartNumber','LINE','WORK_ORDER','WO_STATUS','RESULT']
     keyData1=['WORK_ORDER','SerialNumber','TESTING_DATE','GooglePartNumber','LINE','StationName','TEST_ITEM','LOWER_LIMIT','UPPER_LIMIT','TEST_VALUE','TEST_RESULT']
     workbook = xlrd.open_workbook(r'2.xlsx')
     
@@ -59,7 +62,7 @@ class JsonFormat():
             f.write(js_data)
 
 if __name__=="__main__":
-    now = time.strftime("%Y%m%d%H%M%S")
+    now = time.strftime("%Y%m%d%H")
     filepath="zd.json"
     newpath=now+".json"
     obj=JsonFormat(filepath,newpath)

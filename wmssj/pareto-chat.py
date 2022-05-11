@@ -6,7 +6,7 @@ plt.rcParams["font.family"] = 'Arial Unicode MS'##防止在matplotlib中中文�
 
 df = pd.read_excel('bl.xlsx')
 
-data = pd.Series(df['数量'].values,index = df['线别'])##将目标数据导入为series元组
+data = pd.Series(df['Fail_QTY'].values,index = df['PD_LINE'])##将目标数据导入为series元组
 
 data.sort_values(ascending = False,inplace = True )#对数组进行排序,ascending 升序,inplace代表行和列的排序
 
@@ -38,7 +38,7 @@ print('超过80%占比的节点值索引位置：',key_num)
 
 key_product = data.loc[:key]
 
-print('核心线别：')
+print('线别：')
 
 print(key_product)
 
