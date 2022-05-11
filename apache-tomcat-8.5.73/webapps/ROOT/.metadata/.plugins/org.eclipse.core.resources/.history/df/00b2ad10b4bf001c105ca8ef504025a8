@@ -1,0 +1,313 @@
+<%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
+<%@ page import="java.text.*"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*"%>
+ 
+<html>
+
+<head>
+ 
+  <title>print</title>
+   
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 34px;
+	font-weight: bold;
+	padding-right: 150px;
+}
+-->
+.mt{
+
+ border-collapse:collapse;
+
+ border:2px solid black; /*设置表格的外边框*/
+
+}
+
+#container {
+    height: 70%;
+}
+
+
+</style>
+
+<style type="text/css"media="print">
+.noprint{display : none;}
+</style>
+ 
+   
+</head>
+<body>
+<script language="JavaScript" src="mydate.js"></script>
+
+<%
+
+Class.forName("oracle.jdbc.driver.OracleDriver");
+Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@172.22.8.234/MES","sajet","tech");
+Statement stmt=connection.createStatement();
+
+
+String a=request.getParameter("test1");
+String b=request.getParameter("test2");
+String c=request.getParameter("time");
+
+ResultSet rs=stmt.executeQuery("select work_order,sum(TARGET_QTY),rq,jzmc,wz,date_code,part_no,xh,f,t,truename,sbbh,SUM(QTY),upload_time,ipqc ,MR_NO ,ITEM from print_qtyc where work_order like'%"+a+"%'and part_no like'%"+b+"%' AND STATUS='2' and upload_time like to_date('"+c+"','yyyy/mm/dd hh24:mi:ss') group by work_order,upload_time,jzmc,date_code,wz,part_no,xh,f,t,truename,sbbh,rq,ipqc,MR_NO ,ITEM order by upload_time desc");
+
+%>
+
+
+
+ 
+
+<script type="text/javascript" >
+	$(document).ready(function(){
+			IniEvent();
+		});
+function TrOnClick() {
+	        var tbl = document.getElementById("tblMain");
+	        var trs = tbl.getElementsByTagName("tr");
+	        for (var i = 1; i < trs.length; i++) {
+	            if (trs[i] == this) {
+	                trs[i].style.background = "#76e141";
+	    			var SZ_col = trs[i];
+	    			//这里是要提交值
+	    		console.log(SZ_col.cells[0].innerHTML);
+	    		console.log(SZ_col.cells[1].innerHTML);	
+	    		console.log(SZ_col.cells[2].innerHTML);	
+	    		console.log(SZ_col.cells[3].innerHTML);	
+	    		console.log(SZ_col.cells[4].innerHTML);	
+	    		console.log(SZ_col.cells[5].innerHTML);	
+	    		console.log(SZ_col.cells[6].innerHTML);	
+	    		console.log(SZ_col.cells[7].innerHTML);	
+	    		console.log(SZ_col.cells[8].innerHTML);	
+	    		console.log(SZ_col.cells[9].innerHTML);	
+	    		console.log(SZ_col.cells[10].innerHTML);	
+	    		console.log(SZ_col.cells[11].innerHTML);	
+	    		console.log(SZ_col.cells[12].innerHTML);	
+	    		console.log(SZ_col.cells[13].innerHTML);	
+	    		console.log(SZ_col.cells[14].innerHTML);	
+	    		
+	    	   document.getElementById("aa").value= SZ_col.cells[0].innerHTML;
+	    	   document.getElementById("bb").value =SZ_col.cells[1].innerHTML;
+	    	   document.getElementById("cc").value =SZ_col.cells[2].innerHTML;
+	    	   document.getElementById("dd").value =SZ_col.cells[3].innerHTML;
+	    	   document.getElementById("ee").value =SZ_col.cells[4].innerHTML;
+	    	   document.getElementById("ff").value =SZ_col.cells[5].innerHTML;
+	    	   document.getElementById("gg").value =SZ_col.cells[6].innerHTML;
+	    	   document.getElementById("hh").value =SZ_col.cells[7].innerHTML;
+	    	   document.getElementById("ii").value =SZ_col.cells[8].innerHTML;
+	    	   document.getElementById("jj").value =SZ_col.cells[9].innerHTML;
+	    	   document.getElementById("kk").value =SZ_col.cells[10].innerHTML;
+	    	   document.getElementById("ll").value =SZ_col.cells[11].innerHTML;
+	    	   document.getElementById("mm").value =SZ_col.cells[12].innerHTML;
+	    	   document.getElementById("nn").value =SZ_col.cells[13].innerHTML;
+	    	   document.getElementById("uu").value =SZ_col.cells[14].innerHTML;
+	    	 
+	    			//这里是要提交值
+	            } else {
+	                trs[i].style.background = "white";
+	            }
+	        }
+	    }
+		
+		function IniEvent() {
+	        var tbl = document.getElementById("tblMain");
+	        var trs = tbl.getElementsByTagName("tr");
+	        for (var i = 1; i < trs.length; i++) {
+	            trs[i].onclick = TrOnClick;
+	        }
+	    }
+		
+		
+</script>
+  
+
+ 
+ <table width="764"border="0" align="center">
+  <tr>
+    <td  colspan="2"><div align="left"><img src="logo.jpg" width="189" height="60" /></div></td>
+    <td width="461" colspan="4"><div align="center" class="STYLE1">流程管制卡</div></td>
+  </tr>
+</table>
+<table class="mt" width="764" height="533"  align="center" >
+  
+  <tr>
+    <td width="51"><div align="center">工單：</div></td>
+    <td width="168" ><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"id="aa"></td>
+    <td width="99"><div align="center">批量：</div></td>
+    <td width="168"><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"id="bb"></td>
+    <td width="95"><div align="center">日期：</div></td>
+    <td width="153"><input style="outline:none;border:0px;font-size:16px;width: 153px;text-decoration:underline;"    type= "text"id="cc"></td>
+  </tr>
+  <tr>
+    <td><div align="center">機種：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 170px;text-decoration:underline;"    type= "text"id="dd"></td>
+    <td><div align="center">位置：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"id="ee"></td>
+    <td><div align="center">D/C：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"id="ff"></td>
+  </tr>
+  <tr>
+    <td><div align="center">料號：</div></td>
+    <td colspan="2"><input style="outline:none;border:0px;font-size:16px;width: 170px;text-decoration:underline;"    type= "text"id="gg"></td>
+    <td><div align="center">型號：</div></td>
+    <td colspan="2"><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"id="hh"></td>
+  </tr>
+  <tr>
+    <td><div align="center">&nbsp;&nbsp;&nbsp;FROM：</div></td>
+    <td colspan="2"><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"id="ii"></td>
+    <td><div align="center">TO：</div></td>
+    <td colspan="2"><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"id="jj"></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作業一</td>
+    
+    <td><div align="center">作業員：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"id="kk"></td>
+    <td><div align="center">設備編號：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"  type= "text"id="ll"></td>
+  </tr>
+  <tr>
+    <td><div align="center">數量：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"id="mm"></td>
+    <td><div align="center">作業時間：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 153px;text-decoration:underline;"    type= "text"id="nn"></td>
+    <td><div align="center">IPQC：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;" type= "text"id="uu"></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作業二</td>
+    
+    <td><div align="center">作業員：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"></td>
+    <td><div align="center">設備編號：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"  type= "text"></td>
+  </tr>
+  <tr>
+    <td><div align="center">數量：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"></td>
+    <td><div align="center">作業時間：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 153px;text-decoration:underline;"    type= "text"></td>
+    <td><div align="center">IPQC：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;" type= "text"></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作業三</td>
+    
+    <td><div align="center">作業員：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"></td>
+    <td><div align="center">設備編號：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"  type= "text"></td>
+  </tr>
+  <tr>
+    <td><div align="center">數量：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"></td>
+    <td><div align="center">作業時間：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 153px;text-decoration:underline;"    type= "text"></td>
+    <td><div align="center">IPQC：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;" type= "text"></td>
+  </tr>
+ <tr>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作業四</td>
+    
+    <td><div align="center">作業員：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"    type= "text"></td>
+    <td><div align="center">設備編號：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"  type= "text"></td>
+  </tr>
+  <tr>
+    <td><div align="center">數量：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;"   type= "text"></td>
+    <td><div align="center">作業時間：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 153px;text-decoration:underline;"    type= "text"></td>
+    <td><div align="center">IPQC：</div></td>
+    <td><input style="outline:none;border:0px;font-size:16px;width: 120px;text-decoration:underline;" type= "text"></td>
+  </tr>
+  
+</table>
+  
+  <p></p>
+  <table border="0"align="center">
+  <p class ="noprint" align="center" >
+  
+  <form method="post">
+               <label>工單:</label>
+   <label>
+    
+    <input type="text" id="test1" name="test1"  value="">
+    </label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;料號:</label>
+   <label>
+    
+    <input type="text" id="test2" name="test2" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </label>
+    
+     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期:</label>
+   <label>
+    <input type="text" id="time" name="time" onfocus="MyCalendar.SetDate(this)" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    </label>
+    <input type="submit" value="查詢" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </form>
+     <input type="button" class="button1" onclick="javascript:window.print();" value="列印">
+         </p>  
+  </table>
+  <p></p>
+  
+ <table  class ="noprint"  border="1" onclick="IniEvent()" id ="tblMain"style="font-family: Verdana, sans-serif;border-collapse: collapse; border: 1px solid #ebebeb;margin: 10px auto;text-align: center;width: 90%;max-width: 90%;padding: 1em 0;font-size: 0.8em;color: #555;">
+    <thead style="width: calc( 100% - 1em );display: none;">
+    <tr style=" width:100%;table-layout:fixed;">
+        <td>工單</td>
+       <td>批量</td>
+         <td>日期</td>
+        <td>機種</td>
+        <td>位置</td>
+         <td>D/C</td>
+       <td>料號</td>
+         <td>型號</td>
+        <td>FROM</td>
+        <td>TO</td>
+         <td>作業員</td>
+       <td>設備編號</td>
+         <td>數量</td>
+        <td>作業時間</td>
+        <td>IPQC</td>
+        <td>发料单号</td>
+        <td>项次</td>
+       
+    </tr>
+     </thead>
+      <tbody style="height:350px;overflow-y:scroll;">
+    <% while(rs.next()){ %>
+   
+    <tr style=" display:table;width:100%;table-layout:fixed;">
+   
+        <td><%=rs.getString(1)%></td>
+         <td><%=rs.getString(2)%></td>
+          <td><%=rs.getString(3)%></td>
+           <td><%=rs.getString(4)%></td>
+            <td><%=rs.getString(5)%></td>
+             <td><%=rs.getString(6)%></td>
+              <td><%=rs.getString(7)%></td>
+               <td><%=rs.getString(8)%></td>
+                <td><%=rs.getString(9)%></td>
+                 <td><%=rs.getString(10)%></td>
+                  <td><%=rs.getString(11)%></td>
+                   <td><%=rs.getString(12)%></td>
+                    <td><%=rs.getString(13)%></td>
+                     <td><%=rs.getString(14)%></td>
+                      <td><%=rs.getString(15)%></td>
+                      <td><%=rs.getString(16)%></td>
+                      <td><%=rs.getString(17)%></td>
+                     
+                     
+    </tr>
+    
+
+    <% } %>
+ </tbody>
+</table>
+ 
+ 
+</body>
+</html>

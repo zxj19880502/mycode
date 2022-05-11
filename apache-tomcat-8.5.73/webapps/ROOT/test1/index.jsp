@@ -1,9 +1,5 @@
-
 <%@ page contentType="text/html;charset=utf-8" language="java" errorPage="" %>
-
 <script language="JavaScript" src="mydate.js"></script>
-
-
 <form style=" border: 2px solid #dddd;width: 47%;padding-bottom:20px;padding-top:20px;" id="form1" name="form1" method="get" action="time.jsp">
   
   <label>开始日期</label>

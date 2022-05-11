@@ -6,5 +6,6 @@
 <item elementID="=test1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1642494181937_2" label="Window Working Set" name="Aggregate for window 1642494181936"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1650608711939_4" label="Window Working Set" name="Aggregate for window 1650608711939"/>
 <mruList name="test1"/>
 </workingSetManager>

@@ -47,14 +47,6 @@
     padding: 0.5em;
 }
 
-#datatable thead tr,
-#datatable tr:nth-child(even) {
-    background: #f8f8f8;
-}
-
-#datatable tr:hover {
-    background: #f1f7ff;
-}
 
 		</style>
  
@@ -69,7 +61,7 @@
 
 <%
 Class.forName("oracle.jdbc.driver.OracleDriver");
- Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@172.22.24.221:1521:ledmes1","sajet","tech");
+ Connection connection=DriverManager.getConnection("jdbc:oracle:thin:@172.22.24.119:1521:ledmes","sajet","tech");
 Statement stmt=connection.createStatement();
 String path = request.getContextPath(); 
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
@@ -77,7 +69,7 @@ String name = request.getParameter("workorder");//用request得到
 
 
 
-ResultSet rs=stmt.executeQuery("SELECT PDLINE_NAME,PROCESS_NAME ,SUM(PASS_QTY)as good,SUM(FAIL_QTY)as Fail,sum(PASS_QTY+FAIL_QTY)as input,round(SUM(PASS_QTY)/sum(PASS_QTY+FAIL_QTY)*100,2)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE WORK_ORDER='"+name+"' ) GROUP BY PROCESS_NAME,PDLINE_NAME ORDER BY Fail DESC  ");
+ResultSet rs=stmt.executeQuery("SELECT PDLINE_NAME,PROCESS_NAME ,SUM(PASS_QTY)as good,SUM(FAIL_QTY)as Fail,sum(PASS_QTY+FAIL_QTY)as input,round(decode(SUM(PASS_QTY),0,0,(SUM(PASS_QTY)/(sum(PASS_QTY+FAIL_QTY)))*100),2)as Yield from(select * from sajet.G_SN_COUNT a LEFT join sajet.SYS_PROCESS b  on a.process_id = b.process_id LEFT join sajet.SYS_PDLINE b  on a.PDLINE_ID = b.PDLINE_ID WHERE WORK_ORDER='"+name+"' ) GROUP BY PROCESS_NAME,PDLINE_NAME ORDER BY Fail DESC  ");
 
 
 
@@ -87,22 +79,22 @@ ResultSet rs=stmt.executeQuery("SELECT PDLINE_NAME,PROCESS_NAME ,SUM(PASS_QTY)as
     <div id="container"></div>
 <table id="datatable">
     <tr>
-        <td>Pdline/Process</td>
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">Pdline/Process</td>
        
-        <td>Output</td>
-        <td>Fail</td>
-        <td>Input</td>
-        <td>Yield(%)</td>
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">Output</td>
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">Fail</td>
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">Input</td>
+        <td style="background: #94c9ff;border: 1px solid #ebebeb;">Yield(%)</td>
     </tr>
     
     <% while(rs.next()){ %>
  
     <tr>
-        <td><%=rs.getString(1)%>/<%=rs.getString(2)%></td>    
-        <td><%=rs.getString(3)%></td>
-        <td><%=rs.getString(4)%></td>
-        <td><%=rs.getString(5)%></td>
-         <td><%=rs.getString(6)%></td>
+        <td style=" border: 1px solid #ebebeb;"><%=rs.getString(1)%>/<%=rs.getString(2)%></td>    
+        <td style=" border: 1px solid #ebebeb;"><%=rs.getString(3)%></td>
+        <td style=" border: 1px solid #ebebeb;"><%=rs.getString(4)%></td>
+        <td style=" border: 1px solid #ebebeb;"><%=rs.getString(5)%></td>
+         <td style=" border: 1px solid #ebebeb;"><%=rs.getString(6)%></td>
     </tr>
  
     <% } %>
@@ -123,12 +115,31 @@ window.onload = function() {
             // 对应列
             if(c + 1 === column_num
                 // 判断是否大于 0
-                && parseFloat(cells[c].innerHTML) > 0) {
+                && parseFloat(cells[c].innerHTML) > 0 && parseFloat(cells[c].innerHTML)<= 10) {
                 // 两者均成立，改变颜色
-                rows[i].style.color = "#f00";
+                rows[i].style.background = "#f7c017";
+                
                 // 检查下一行
                 break;
             }
+            if(c + 1 === column_num
+                    // 判断是否大于 0
+                    && parseFloat(cells[c].innerHTML) > 10 ) {
+                    // 两者均成立，改变颜色
+                    rows[i].style.background = "#f73c17";
+                   
+                    // 检查下一行
+                    break;
+                }
+            if(c + 1 === column_num
+                    // 判断是否大于 0
+                    && parseFloat(cells[c].innerHTML) === 0) {
+                    // 两者均成立，改变颜色
+                    rows[i].style.background = "#37f717";
+                   
+                    // 检查下一行
+                    break;
+                }
         }
     }
 };
