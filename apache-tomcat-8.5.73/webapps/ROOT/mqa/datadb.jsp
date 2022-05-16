@@ -47,10 +47,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         String nontrs = request.getParameter("nontrs");
         String nonbls = request.getParameter("nonbls");
         
-        
-       
-        
-       String sql="insert into WIQWMS.mqa values( '"+jcps+"','"+bhgps+"','"+gds+"','"+bljs+"','"+trs+"','"+bls+"','"+datatime1+"','"+nonjcps+"','"+nonbhgps+"','"+nongds+"','"+nonbljs+"','"+nontrs+"','"+nonbls+"')";
+        String zyjcs = request.getParameter("jcs");
+        String zyblss = request.getParameter("blss");
+        String zrjcs = request.getParameter("zrjcs");
+        String zrbls = request.getParameter("zrbls");
+        String zygdss = request.getParameter("zygdss");
+        String zrgds = request.getParameter("zrgdss");
+        String zytrs = request.getParameter("zytrs");
+        String zrtrs = request.getParameter("zrtrs");
+       String sql="insert into WIQWMS.mqa values( '"+jcps+"','"+bhgps+"','"+gds+"','"+bljs+"','"+trs+"','"+bls+"','"+datatime1+"','"+nonjcps+"','"+nonbhgps+"','"+nongds+"','"+nonbljs+"','"+nontrs+"','"+nonbls+"','"+zyjcs+"','"+zyblss+"','"+zrjcs+"','"+zrbls+"','"+zygdss+"','"+zrgdss+"','"+zytrs+"','"+zrtrs+"')";
        
                 Statement smt=con.createStatement();
             int  n=  smt.executeUpdate(sql);

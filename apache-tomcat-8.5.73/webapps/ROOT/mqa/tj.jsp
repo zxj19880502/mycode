@@ -66,111 +66,146 @@
 
     <body>
 
-   <div  style="padding-top:10px;">
+ <div  style="padding-top:10px;">
 	 
     <table    style="position:absolute;width: 100%; font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;font-size:0.8em;height: 33%; ">
 	<form style="padding-bottom:10px;padding-top:10px;" method="post"action="datadb.jsp"onsubmit="return mqa()"autocomplete="off">
 	<tr><td style="width:20%;padding-right: 12%;">制一基础数据</td></tr>
       <tr>
-	  <td style="width:9%;" >FAI：累计检查批数：</td>
+	  <td style="width:9%;" >FAI：累计检查数：</td>
         <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="jcps" id="jcps" class="username" value="0" onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
-		<td  style="width:9%;">累计不合格批数：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="bhgps" id="bhgps" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		<td style="width:9%;" >检查数：</td>
+        <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="jcs" id="jcs" class="username" value="0" onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
-		<td style="width:12%;">异常比例：累计工单数：</td>
+		<td  style="width:9%;">累计不合格数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="bhgps" id="bhgps" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		<td style="width:12%;">异常比例：工单数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="gds" id="gds" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
-		<td style="width:9%;">累计不良件数：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="bljs" id="bljs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
       </tr>
       <tr>
-	  
-		<td style="width:9%;">HI-POT：累计投入数：</td>
+	  <td style="width:9%;">累计不良件数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="bljs" id="bljs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
+		<td style="width:11%;">HI-POT：累计投入数：</td>
         <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="trs" id="trs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		<td style="width:9%;">累计不良数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="bls" id="bls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		<td style="width:9%;">不良数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="blss" id="blss" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		
       </tr>
     <tr><td style="width:20%;padding-right: 12%;">制二基础数据</td></tr>
       <tr>
-	  <td style="width:9%;">FAI：累计检查批数：</td>
+	  <td style="width:9%;">FAI：累计检查数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nonjcps" id="nonjcps" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
-		<td style="width:9%;">累计不合格批数：</td>
+		
+		 <td style="width:9%;">检查数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="zrjcs" id="zrjcs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
+		<td style="width:9%;">累计不合格数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nonbhgps" id="nonbhgps" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
-		<td style="width:12%;">异常比例：累计工单数：</td>
+		<td style="width:12%;">异常比例：工单数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nongds" id="nongds" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
-		<td style="width:9%;">累计不良件数：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nonbljs" id="nonbljs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
-
+		
       </tr>
       <tr>
+	  <td style="width:9%;">累计不良件数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nonbljs" id="nonbljs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 	  
-		<td style="width:9%;">HI-POT：累计投入数：</td>
+		<td style="width:11%;">HI-POT：累计投入数：</td>
         <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nontrs" id="nontrs" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		<td style="width:9%;">累计不良数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nonbls" id="nonbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
-		<td style="width:9%;">日期：</td>
-        <td ><input readonly="readonly" readonly="value"  onkeyup="value=value.replace(/[^\d{1,}\/\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="datatime1" id="datatime1" class="username"  onClick="WdatePicker({dateFmt:'yyyy/MM/dd'})" value="" ></td>
+		<td style="width:9%;">不良数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="zrbls" id="zrbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
+		
+		
+		
       </tr>
-	<tr><td colspan="20"> <input  type="submit"  value="提交" /></td></tr>
+	<tr>
+	<td style="width:9%;">日期：</td>
+    <td ><input readonly="readonly" readonly="value"  onkeyup="value=value.replace(/[^\d{1,}\/\d{1,}|\d{1,}]/g,'')"  style="width:100%;" type="text" name="datatime1" id="datatime1" class="username"  onClick="WdatePicker({dateFmt:'yyyy/MM/dd'})" value="" ></td>
+	<td colspan="18"> <input  type="submit"  value="提交" /></td>
+	</tr>
 	</form>
     </table>
   
-	 <table   style="position:absolute;width: 100%; font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:0.8em;height: 22%;margin-top:17.5%; ">
+	 <table   style="position:absolute;width: 100%; font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:0.8em;height: 33%;margin-top:17.5%; ">
 	 <form style="padding-bottom:10px;padding-top:10px;" method="post"action="ooba.jsp"onsubmit="return ooba()"autocomplete="off">
 	<tr><td style="width:20%;padding-right: 10%;">OOBA 制一 基础数据</td></tr>
       <tr>
 	  
 		<td style="width:10%;">累计送验数：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:65%;" type="text" name="ljsys" id="ljsys" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="ljsys" id="ljsys" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		<td style="width:10%;">累计抽样数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="ljcys" id="ljcys" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		
-		<td style="width:10%;">当日待检数量：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:65%;" type="text" name="drdjsl" id="drdjsl" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		<td style="width:10%;">抽样数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="drdjsl" id="drdjsl" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		
 		<td style="width:10%;">累计外观不良数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="wgbls" id="wgbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
+		<tr>
+		<td style="width:10%;">外观不良数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="wgblss" id="wgblss" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
 		<td style="width:10%;">累计电性不良数：</td>
         <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="dxbls" id="dxbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+        <td style="width:10%;">电性不良数：</td>
+        <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="dxblss" id="dxblss" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
         
-		
+		</tr>
 		
       </tr>
 	  <tr><td style="width:23%;padding-right: 10%;">OOBA 制二 基础数据</td></tr>
       <tr>
 	  <td style="width:10%;">累计送验数：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:65%;" type="text" name="nonljsys" id="nonljsys" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nonljsys" id="nonljsys" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		<td style="width:10%;">累计抽样数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="nonljcys" id="nonljcys" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		
-		<td style="width:10%;">当日待检数量：</td>
-        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:65%;" type="text" name="nondrdjsl" id="nondrdjsl" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		<td style="width:10%;">抽样数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width:55%;" type="text" name="nondrdjsl" id="nondrdjsl" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
 		
 		<td style="width:10%;">累计外观不良数：</td>
         <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="nonwgbls" id="nonwgbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
+		
+		</tr>
+		
+		<tr>
+		<td style="width:10%;">外观不良数：</td>
+        <td ><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="zrwgbls" id="zrwgbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+		
 		<td style="width:10%;">累计电性不良数：</td>
         <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="nondxbls" id="nondxbls" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
+        <td style="width:10%;">电性不良数：</td>
+        <td><input onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')"  style="width: 55%;" type="text" name="nondxblss" id="nondxblss" class="username" value="0"onfocus="if(this.value=='0'){this.value='';}" onblur="if(this.value==''){this.value='0';}"></td>
         
 		</tr>
-		<tr>
-		<td style="width:7%;">日期：</td>
-        <td ><input readonly="readonly" readonly="value"  onkeyup="value=value.replace(/[^\d{1,}\/\d{1,}|\d{1,}]/g,'')" style="width: 100%;" type="text" name="datatime2" id="datatime2" class="username" onClick="WdatePicker({dateFmt:'yyyy/MM/dd'})" value=""></td>
-      </tr>
-  <tr><td colspan="12"> <input  type="submit"  value="提交" /></td></tr>
+		
+		
+  <tr>
+  	<td style="width:7%;">日期：</td>
+    <td ><input readonly="readonly" readonly="value"  onkeyup="value=value.replace(/[^\d{1,}\/\d{1,}|\d{1,}]/g,'')" style="width: 100%;" type="text" name="datatime2" id="datatime2" class="username" onClick="WdatePicker({dateFmt:'yyyy/MM/dd'})" value=""></td>
+  <td colspan="10"> <input  type="submit"  value="提交" /></td>
+  </tr>
    </form>
     </table>
 	
 	
-	<table   style="position:absolute;width: 100%; font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:0.8em;height: 22%;margin-top:29.7%; ">
+	<table   style="position:absolute;width: 100%; font-family: Verdana, sans-serif;border-collapse: collapse;border: 1px solid #ebebeb;text-align: center;font-size:0.8em;height: 22%;margin-top:35%; ">
 	<form style="padding-bottom:10px;padding-top:10px;" method="post"action="qhold.jsp"onsubmit="return qhold()"autocomplete="off">
 	<tr><td style="width:20%;padding-right: 12%;">Q HOLD</td></tr>
       <tr>
@@ -188,7 +223,7 @@
 		<tr>
 		
 		<td style="width:10%;">日期：</td>
-        <td ><input readonly="readonly" readonly="value"  style="width:65%;" type="text" name="datatime" id="datatime" class="username" onClick="WdatePicker({dateFmt:'yyyy/MM/dd'})" value=""></td>
+        <td ><input readonly="readonly" readonly="value"  style="width:100%;" type="text" name="datatime" id="datatime" class="username" onClick="WdatePicker({dateFmt:'yyyy/MM/dd'})" value=""></td>
       </tr>
    <tr><td colspan="10"> <input  type="submit"  value="提交" /></td></tr>
     </form>

@@ -45,10 +45,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        
         String nondxbls = request.getParameter("nondxbls");
         
+        String zywgbls = request.getParameter("wgblss");
+        String zydxbls = request.getParameter("dxblss");	
+        String zrwgbls = request.getParameter("zrwgbls");
+        String zrdxbls = request.getParameter("nondxblss");			
+     
         
-        	
-        		
-       String ooba="insert into WIQWMS.ooba values('"+ljcys+"','"+wgbls+"','"+dxbls+"','"+datatime2+"','"+nonljcys+"','"+nonwgbls+"','"+nondxbls+"','"+ljscys+"','"+drdjsl+"','"+nonljsys+"','"+nondrdjsl+"')";
+        String ooba="insert into WIQWMS.ooba values('"+ljcys+"','"+wgbls+"','"+dxbls+"','"+datatime2+"','"+nonljcys+"','"+nonwgbls+"','"+nondxbls+"','"+ljscys+"','"+drdjsl+"','"+nonljsys+"','"+nondrdjsl+"','"+zywgbls+"','"+zydxbls+"','"+zrwgbls+"','"+zrdxbls+"')";
         	       
                   Statement smt1=con.createStatement();
               int  mm=  smt1.executeUpdate(ooba);
